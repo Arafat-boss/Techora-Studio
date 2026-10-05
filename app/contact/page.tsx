@@ -214,7 +214,7 @@ export default function ContactPage() {
                       className={`px-4 py-2.5 rounded-xl text-xs font-mono text-left border transition-all cursor-pointer ${
                         formData.service === srv
                           ? "bg-black border-black text-white font-semibold shadow-xs"
-                          : "bg-[#f9f9fb] border-black/10 text-zinc-700 hover:border-black/30 hover:bg-zinc-50"
+                          : "bg-[#f9f9fb] border-black/10 text-zinc-700 hover:border-black hover:bg-black hover:text-white"
                       }`}
                     >
                       {srv}
@@ -237,7 +237,7 @@ export default function ContactPage() {
                       className={`py-2 px-3 rounded-xl text-xs font-mono text-center border transition-all cursor-pointer ${
                         formData.budget === b
                           ? "bg-black border-black text-white font-bold shadow-xs"
-                          : "bg-[#f9f9fb] border-black/10 text-zinc-700 hover:border-black/30 hover:bg-zinc-50"
+                          : "bg-[#f9f9fb] border-black/10 text-zinc-700 hover:border-black hover:bg-black hover:text-white"
                       }`}
                     >
                       {b}

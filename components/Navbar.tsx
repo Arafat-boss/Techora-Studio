@@ -205,7 +205,7 @@ export default function Navbar() {
                     {["X / Twitter", "Dribbble", "LinkedIn", "Instagram", "GitHub"].map((soc) => (
                       <span
                         key={soc}
-                        className="px-3 py-1 text-xs rounded-full bg-black/5 border border-black/10 hover:border-black hover:text-black transition-colors cursor-pointer text-zinc-700"
+                        className="px-3 py-1 text-xs rounded-full bg-black/5 border border-black/10 hover:border-black hover:bg-black hover:text-white transition-colors cursor-pointer text-zinc-700 font-mono"
                       >
                         {soc}
                       </span>

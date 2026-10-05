@@ -165,7 +165,7 @@ export default function GalleryPage() {
               className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all whitespace-nowrap cursor-pointer ${
                 isActive
                   ? "bg-black text-white font-semibold shadow-sm"
-                  : "bg-black/[0.04] hover:bg-black/[0.08] text-zinc-600 hover:text-zinc-900 border border-black/10"
+                  : "bg-black/[0.04] hover:bg-black hover:text-white text-zinc-600 border border-black/10 hover:border-black"
               }`}
             >
               {cat}
@@ -257,7 +257,7 @@ export default function GalleryPage() {
               {/* Close Button */}
               <button
                 onClick={() => setActiveModalItem(null)}
-                className="absolute top-5 right-5 w-10 h-10 rounded-full bg-zinc-100 hover:bg-zinc-200 border border-black/10 flex items-center justify-center text-zinc-900 transition-colors cursor-pointer"
+                className="absolute top-5 right-5 w-10 h-10 rounded-full bg-zinc-100 hover:bg-black hover:text-white border border-black/10 flex items-center justify-center text-zinc-900 transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>

@@ -45,7 +45,7 @@ export default function ArticleIndexPage() {
               className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all whitespace-nowrap cursor-pointer ${
                 isActive
                   ? "bg-black text-white font-semibold shadow-sm"
-                  : "bg-black/[0.04] hover:bg-black/[0.08] text-zinc-600 hover:text-zinc-900 border border-black/10"
+                  : "bg-black/[0.04] hover:bg-black hover:text-white text-zinc-600 border border-black/10 hover:border-black"
               }`}
             >
               {tag}

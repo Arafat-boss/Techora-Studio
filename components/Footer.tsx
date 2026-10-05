@@ -43,7 +43,7 @@ export default function Footer() {
 
           <Link
             href="/contact"
-            className="group inline-flex items-center gap-2 bg-black text-white hover:bg-[#84cc16] hover:text-black font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 active:scale-95 flex-shrink-0"
+            className="group inline-flex items-center gap-2 bg-black text-white hover:bg-zinc-800 font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 active:scale-95 flex-shrink-0"
           >
             <span>Schedule Discovery Call</span>
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
