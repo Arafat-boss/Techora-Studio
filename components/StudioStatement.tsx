@@ -7,7 +7,7 @@ export default function StudioStatement() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 0.85", "end 0.4"],
+    offset: ["start 0.85", "start 0.25"],
   });
 
   const statement =
@@ -28,7 +28,7 @@ export default function StudioStatement() {
         </div>
 
         {/* Word by word illuminated paragraph */}
-        <p className="text-2xl sm:text-4xl md:text-5xl font-medium tracking-tight leading-[1.3] text-zinc-300 flex flex-wrap gap-x-2.5 sm:gap-x-3.5 gap-y-1 sm:gap-y-2">
+        <p className="text-2xl sm:text-4xl md:text-5xl font-medium tracking-tight leading-[1.3] text-zinc-400 flex flex-wrap gap-x-2.5 sm:gap-x-3.5 gap-y-1 sm:gap-y-2">
           {words.map((word, i) => {
             const start = i / words.length;
             const end = start + 1 / words.length;
@@ -69,11 +69,11 @@ function Word({
   progress: any;
   range: [number, number];
 }) {
-  const opacity = useTransform(progress, range, [0.25, 1]);
+  const opacity = useTransform(progress, range, [0.35, 1]);
   const color = useTransform(
     progress,
     range,
-    ["rgba(161, 161, 170, 0.4)", "rgba(9, 9, 11, 1)"]
+    ["rgba(161, 161, 170, 0.7)", "rgba(9, 9, 11, 1)"]
   );
 
   const isSpecial = word.toLowerCase().includes("brand") || word.toLowerCase().includes("physical") || word.toLowerCase().includes("3d");
@@ -81,7 +81,7 @@ function Word({
   return (
     <motion.span
       style={{ opacity, color }}
-      className={`transition-colors duration-150 ${isSpecial ? "font-serif-italic font-normal" : ""}`}
+      className={`transition-colors duration-100 ${isSpecial ? "font-serif-italic font-normal" : ""}`}
     >
       {word}
     </motion.span>
