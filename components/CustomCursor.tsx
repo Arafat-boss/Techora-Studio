@@ -78,11 +78,11 @@ export default function CustomCursor() {
           <motion.div
             animate={{
               scale: isPointer ? 1.6 : 1,
-              backgroundColor: isPointer ? "rgba(162, 228, 53, 0.4)" : "rgba(255, 255, 255, 0.3)",
-              borderColor: isPointer ? "rgba(162, 228, 53, 0.8)" : "rgba(255, 255, 255, 0.5)",
+              backgroundColor: isPointer ? "rgba(132, 204, 22, 0.4)" : "rgba(0, 0, 0, 0.15)",
+              borderColor: isPointer ? "rgba(94, 156, 4, 0.9)" : "rgba(0, 0, 0, 0.4)",
             }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="w-3 h-3 rounded-full border -translate-x-1/2 -translate-y-1/2 backdrop-blur-xs"
+            className="w-3.5 h-3.5 rounded-full border -translate-x-1/2 -translate-y-1/2 backdrop-blur-xs"
           />
         )}
       </motion.div>

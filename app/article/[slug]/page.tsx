@@ -31,7 +31,7 @@ export default async function ArticleDetailPage(props: {
       {/* Back button */}
       <Link
         href="/article"
-        className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-white/60 hover:text-[#a2e435] transition-colors mb-8 group"
+        className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-zinc-500 hover:text-black transition-colors mb-8 group"
       >
         <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" />
         <span>Back to all insights</span>
@@ -40,32 +40,32 @@ export default async function ArticleDetailPage(props: {
       {/* Article Header */}
       <div className="space-y-6 mb-10">
         <div className="flex flex-wrap items-center gap-3">
-          <span className="px-3.5 py-1 rounded-full bg-[#a2e435]/10 border border-[#a2e435]/30 text-xs font-mono text-[#a2e435]">
+          <span className="px-3.5 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-[#5e9c04] font-semibold">
             {article.category}
           </span>
-          <span className="text-xs font-mono text-white/40 flex items-center gap-1.5">
+          <span className="text-xs font-mono text-zinc-400 flex items-center gap-1.5">
             <Calendar className="w-3.5 h-3.5" />
             {article.date}
           </span>
-          <span className="text-white/20">•</span>
-          <span className="text-xs font-mono text-white/40 flex items-center gap-1.5">
+          <span className="text-zinc-300">•</span>
+          <span className="text-xs font-mono text-zinc-400 flex items-center gap-1.5">
             <Clock className="w-3.5 h-3.5" />
             {article.readTime}
           </span>
         </div>
 
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-tight">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-900 leading-tight">
           {article.title}
         </h1>
 
-        <p className="text-lg sm:text-xl text-white/70 font-normal leading-relaxed">
+        <p className="text-lg sm:text-xl text-zinc-600 font-normal leading-relaxed">
           {article.excerpt}
         </p>
 
         {/* Author Bio Row */}
-        <div className="flex items-center justify-between pt-6 border-t border-white/10">
+        <div className="flex items-center justify-between pt-6 border-t border-black/10">
           <div className="flex items-center gap-3.5">
-            <div className="relative w-12 h-12 rounded-full overflow-hidden bg-white/10 border border-white/20">
+            <div className="relative w-12 h-12 rounded-full overflow-hidden bg-zinc-100 border border-black/10">
               <Image
                 src={article.author.avatar}
                 alt={article.author.name}
@@ -75,10 +75,10 @@ export default async function ArticleDetailPage(props: {
               />
             </div>
             <div>
-              <div className="text-sm font-bold text-white">
+              <div className="text-sm font-bold text-zinc-900">
                 {article.author.name}
               </div>
-              <div className="text-xs font-mono text-[#a2e435]">
+              <div className="text-xs font-mono text-[#5e9c04]">
                 {article.author.role}
               </div>
             </div>
@@ -87,7 +87,7 @@ export default async function ArticleDetailPage(props: {
       </div>
 
       {/* Featured Image */}
-      <div className="relative aspect-[16/9] rounded-3xl overflow-hidden bg-black/80 border border-white/10 shadow-2xl mb-12">
+      <div className="relative aspect-[16/9] rounded-3xl overflow-hidden bg-zinc-100 border border-black/10 shadow-md mb-12">
         <Image
           src={article.image}
           alt={article.title}
@@ -96,17 +96,17 @@ export default async function ArticleDetailPage(props: {
           sizes="(max-width: 1024px) 100vw, 896px"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-40" />
       </div>
 
       {/* Article Body Content */}
-      <div className="prose prose-invert max-w-none space-y-6 text-base sm:text-lg text-white/80 leading-relaxed font-normal">
+      <div className="prose max-w-none space-y-6 text-base sm:text-lg text-zinc-800 leading-relaxed font-normal">
         {article.content.map((paragraph, pIdx) => {
           if (paragraph.startsWith("Key takeaways") || paragraph.startsWith("Best practices")) {
             return (
               <h2
                 key={pIdx}
-                className="text-2xl font-bold text-white pt-6 border-t border-white/10 tracking-tight"
+                className="text-2xl font-bold text-zinc-900 pt-6 border-t border-black/10 tracking-tight"
               >
                 {paragraph}
               </h2>
@@ -116,9 +116,9 @@ export default async function ArticleDetailPage(props: {
             return (
               <div
                 key={pIdx}
-                className="flex items-start gap-3 bg-white/[0.03] border border-white/10 p-4 rounded-xl text-sm sm:text-base font-mono text-white/90"
+                className="flex items-start gap-3 bg-[#f9f9fb] border border-black/10 p-4 rounded-xl text-sm sm:text-base font-mono text-zinc-900"
               >
-                <CheckCircle2 className="w-5 h-5 text-[#a2e435] flex-shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-5 h-5 text-[#5e9c04] flex-shrink-0 mt-0.5" />
                 <span>{paragraph.replace(/^\d\.\s*/, "")}</span>
               </div>
             );
@@ -128,14 +128,14 @@ export default async function ArticleDetailPage(props: {
       </div>
 
       {/* Tags */}
-      <div className="pt-10 mt-12 border-t border-white/10 flex flex-wrap items-center gap-2">
-        <span className="text-xs font-mono text-white/40 uppercase tracking-widest mr-2">
+      <div className="pt-10 mt-12 border-t border-black/10 flex flex-wrap items-center gap-2">
+        <span className="text-xs font-mono text-zinc-400 uppercase tracking-widest mr-2 font-semibold">
           Topics:
         </span>
         {article.tags.map((tag) => (
           <span
             key={tag}
-            className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-white/70"
+            className="px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-zinc-700"
           >
             #{tag}
           </span>
@@ -143,19 +143,19 @@ export default async function ArticleDetailPage(props: {
       </div>
 
       {/* Related Articles */}
-      <div className="mt-20 pt-16 border-t border-white/10">
+      <div className="mt-20 pt-16 border-t border-black/10">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <span className="text-xs font-mono text-[#a2e435] uppercase tracking-widest block mb-1">
+            <span className="text-xs font-mono text-[#5e9c04] uppercase tracking-widest block mb-1 font-semibold">
               Keep Reading
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 tracking-tight">
               Latest Insights
             </h2>
           </div>
           <Link
             href="/article"
-            className="text-xs font-mono text-white/60 hover:text-[#a2e435] transition-colors flex items-center gap-1"
+            className="text-xs font-mono text-zinc-500 hover:text-black transition-colors flex items-center gap-1"
           >
             <span>View All</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
@@ -165,9 +165,9 @@ export default async function ArticleDetailPage(props: {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {relatedArticles.map((rel) => (
             <Link key={rel.slug} href={`/article/${rel.slug}`} className="block group">
-              <Card3DTilt className="h-full bg-[#0e0e0e] border border-white/10 hover:border-[#a2e435]/50 rounded-3xl p-5 flex flex-col justify-between transition-all duration-300 shadow-xl">
+              <Card3DTilt className="h-full bg-white border border-black/10 hover:border-black/30 rounded-3xl p-5 flex flex-col justify-between transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
                 <div>
-                  <div className="relative aspect-[16/10] rounded-xl overflow-hidden bg-black mb-4">
+                  <div className="relative aspect-[16/10] rounded-xl overflow-hidden bg-zinc-100 mb-4 border border-black/5">
                     <Image
                       src={rel.image}
                       alt={rel.title}
@@ -176,16 +176,16 @@ export default async function ArticleDetailPage(props: {
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
-                  <span className="text-xs font-mono text-[#a2e435] block mb-1.5">
+                  <span className="text-xs font-mono text-[#5e9c04] block mb-1.5 font-semibold">
                     {rel.category}
                   </span>
-                  <h3 className="text-lg font-bold text-white group-hover:text-[#a2e435] transition-colors leading-snug">
+                  <h3 className="text-lg font-bold text-zinc-900 group-hover:text-black transition-colors leading-snug">
                     {rel.title}
                   </h3>
                 </div>
-                <div className="pt-4 flex items-center justify-between text-xs text-white/40 font-mono">
+                <div className="pt-4 flex items-center justify-between text-xs text-zinc-400 font-mono">
                   <span>{rel.readTime}</span>
-                  <ArrowUpRight className="w-4 h-4 text-white/60 group-hover:text-[#a2e435] transition-colors" />
+                  <ArrowUpRight className="w-4 h-4 text-zinc-500 group-hover:text-black transition-colors" />
                 </div>
               </Card3DTilt>
             </Link>

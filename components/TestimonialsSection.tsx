@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import Card3DTilt from "./Card3DTilt";
 
@@ -57,16 +57,16 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="py-24 sm:py-32 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto border-t border-white/10">
+    <section className="py-24 sm:py-32 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto border-t border-black/10">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono text-[#a2e435] mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#a2e435]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-[#5e9c04] mb-4 font-semibold">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#84cc16]" />
             <span>Client Praise</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white">
+          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-900">
             What Are They Saying <br />
-            <span className="font-serif-italic font-normal text-white/90">About Our Craft?</span>
+            <span className="font-serif-italic font-normal text-zinc-700">About Our Craft?</span>
           </h2>
         </div>
 
@@ -74,14 +74,14 @@ export default function TestimonialsSection() {
         <div className="flex items-center gap-3">
           <button
             onClick={handlePrev}
-            className="w-11 h-11 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#a2e435]/50 flex items-center justify-center text-white transition-all cursor-pointer"
+            className="w-11 h-11 rounded-full bg-zinc-100 hover:bg-zinc-200 border border-black/10 flex items-center justify-center text-zinc-900 transition-all cursor-pointer shadow-xs"
             aria-label="Previous review"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
           <button
             onClick={handleNext}
-            className="w-11 h-11 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#a2e435]/50 flex items-center justify-center text-white transition-all cursor-pointer"
+            className="w-11 h-11 rounded-full bg-zinc-100 hover:bg-zinc-200 border border-black/10 flex items-center justify-center text-zinc-900 transition-all cursor-pointer shadow-xs"
             aria-label="Next review"
           >
             <ChevronRight className="w-5 h-5" />
@@ -101,26 +101,26 @@ export default function TestimonialsSection() {
           >
             <Card3DTilt
               cursorText="Read Review"
-              className="h-full bg-[#0d0d0d] border border-white/10 hover:border-[#a2e435]/40 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 shadow-2xl relative group overflow-hidden"
+              className="h-full bg-white border border-black/10 hover:border-black/30 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.06)] relative group overflow-hidden"
             >
               {/* Stars */}
               <div>
-                <div className="flex items-center gap-1 text-[#a2e435] mb-6">
+                <div className="flex items-center gap-1 text-[#84cc16] mb-6">
                   {[...Array(item.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-[#a2e435]" />
+                    <Star key={i} className="w-4 h-4 fill-[#84cc16]" />
                   ))}
                 </div>
 
-                <Quote className="w-8 h-8 text-white/10 mb-4 group-hover:text-[#a2e435]/30 transition-colors" />
+                <Quote className="w-8 h-8 text-black/10 mb-4 group-hover:text-black/20 transition-colors" />
 
-                <p className="text-base sm:text-lg text-white/80 leading-relaxed font-normal mb-8">
+                <p className="text-base sm:text-lg text-zinc-800 leading-relaxed font-normal mb-8">
                   "{item.quote}"
                 </p>
               </div>
 
               {/* Author Info */}
-              <div className="flex items-center gap-4 pt-6 border-t border-white/10">
-                <div className="relative w-11 h-11 rounded-full overflow-hidden bg-white/10 border border-white/20 flex-shrink-0">
+              <div className="flex items-center gap-4 pt-6 border-t border-black/10">
+                <div className="relative w-11 h-11 rounded-full overflow-hidden bg-zinc-100 border border-black/10 flex-shrink-0">
                   <Image
                     src={item.avatar}
                     alt={item.author}
@@ -130,11 +130,11 @@ export default function TestimonialsSection() {
                   />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-white group-hover:text-[#a2e435] transition-colors">
+                  <h4 className="text-sm font-semibold text-zinc-900 group-hover:text-black transition-colors">
                     {item.author}
                   </h4>
-                  <p className="text-xs text-white/50 font-mono">
-                    {item.role} <span className="text-[#a2e435]">{item.company}</span>
+                  <p className="text-xs text-zinc-500 font-mono">
+                    {item.role} <span className="text-[#5e9c04] font-medium">{item.company}</span>
                   </p>
                 </div>
               </div>

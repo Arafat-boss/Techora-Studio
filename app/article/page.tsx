@@ -22,14 +22,14 @@ export default function ArticleIndexPage() {
     <div className="pt-32 sm:pt-40 pb-20 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
       {/* Page Header */}
       <div className="max-w-3xl mb-12 space-y-4">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono text-[#a2e435]">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#a2e435]" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-[#5e9c04] font-semibold">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#84cc16]" />
           <span>Journal & Insights</span>
         </div>
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white">
-          Design <span className="font-serif-italic font-normal text-[#a2e435]">Insights</span>
+        <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-zinc-900">
+          Design <span className="font-serif-italic font-normal text-zinc-700">Insights</span>
         </h1>
-        <p className="text-sm sm:text-base text-white/60 max-w-2xl font-normal leading-relaxed">
+        <p className="text-sm sm:text-base text-zinc-600 max-w-2xl font-normal leading-relaxed">
           Essays, engineering walkthroughs, and studio research covering industrial design, tactile computing, and high-performance web systems.
         </p>
       </div>
@@ -44,8 +44,8 @@ export default function ArticleIndexPage() {
               onClick={() => setSelectedTag(tag)}
               className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all whitespace-nowrap cursor-pointer ${
                 isActive
-                  ? "bg-[#a2e435] text-black font-semibold shadow-[0_0_15px_rgba(162,228,53,0.3)]"
-                  : "bg-white/[0.04] hover:bg-white/[0.08] text-white/70 hover:text-white border border-white/10"
+                  ? "bg-black text-white font-semibold shadow-sm"
+                  : "bg-black/[0.04] hover:bg-black/[0.08] text-zinc-600 hover:text-zinc-900 border border-black/10"
               }`}
             >
               {tag}
@@ -66,19 +66,19 @@ export default function ArticleIndexPage() {
             <Link href={`/article/${article.slug}`} className="block group h-full">
               <Card3DTilt
                 cursorText="Read Article"
-                className="h-full bg-[#0e0e0e] border border-white/10 hover:border-[#a2e435]/50 rounded-3xl p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 shadow-2xl relative overflow-hidden"
+                className="h-full bg-white border border-black/10 hover:border-black/30 rounded-3xl p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.06)] relative overflow-hidden"
               >
                 {/* Crosshairs */}
-                <span className="absolute top-3 left-3 text-white/20 group-hover:text-[#a2e435]/70 font-mono text-[10px]">
+                <span className="absolute top-3 left-3 text-zinc-300 group-hover:text-zinc-800 font-mono text-[10px]">
                   +
                 </span>
-                <span className="absolute top-3 right-3 text-white/20 group-hover:text-[#a2e435]/70 font-mono text-[10px]">
+                <span className="absolute top-3 right-3 text-zinc-300 group-hover:text-zinc-800 font-mono text-[10px]">
                   +
                 </span>
 
                 <div>
                   {/* Image */}
-                  <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-black/70 border border-white/5 mb-5 flex items-center justify-center">
+                  <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-zinc-100 border border-black/5 mb-5 flex items-center justify-center">
                     <Image
                       src={article.image}
                       alt={article.title}
@@ -86,15 +86,15 @@ export default function ArticleIndexPage() {
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
                     
-                    <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/10 text-[11px] font-mono text-[#a2e435]">
+                    <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md border border-black/10 text-[11px] font-mono text-zinc-900 shadow-sm">
                       {article.category}
                     </div>
                   </div>
 
                   {/* Date and Read time */}
-                  <div className="flex items-center gap-3 text-xs font-mono text-white/40 mb-3">
+                  <div className="flex items-center gap-3 text-xs font-mono text-zinc-400 mb-3">
                     <span className="flex items-center gap-1">
                       <Calendar className="w-3 h-3" />
                       {article.date}
@@ -107,19 +107,19 @@ export default function ArticleIndexPage() {
                   </div>
 
                   {/* Title */}
-                  <h2 className="text-xl font-bold text-white group-hover:text-[#a2e435] transition-colors leading-snug">
+                  <h2 className="text-xl font-bold text-zinc-900 group-hover:text-black transition-colors leading-snug">
                     {article.title}
                   </h2>
 
-                  <p className="text-xs sm:text-sm text-white/60 mt-2 line-clamp-2 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-zinc-600 mt-2 line-clamp-2 leading-relaxed font-normal">
                     {article.excerpt}
                   </p>
                 </div>
 
                 {/* Author row */}
-                <div className="flex items-center justify-between pt-6 mt-6 border-t border-white/10">
+                <div className="flex items-center justify-between pt-6 mt-6 border-t border-black/10">
                   <div className="flex items-center gap-3">
-                    <div className="relative w-8 h-8 rounded-full overflow-hidden bg-white/10 border border-white/20">
+                    <div className="relative w-8 h-8 rounded-full overflow-hidden bg-zinc-100 border border-black/10">
                       <Image
                         src={article.author.avatar}
                         alt={article.author.name}
@@ -128,12 +128,12 @@ export default function ArticleIndexPage() {
                         sizes="32px"
                       />
                     </div>
-                    <span className="text-xs font-semibold text-white/90">
+                    <span className="text-xs font-semibold text-zinc-800">
                       {article.author.name}
                     </span>
                   </div>
 
-                  <div className="w-8 h-8 rounded-full bg-white/5 group-hover:bg-[#a2e435] group-hover:text-black text-white/60 flex items-center justify-center transition-colors">
+                  <div className="w-8 h-8 rounded-full bg-zinc-100 group-hover:bg-black group-hover:text-white text-zinc-700 flex items-center justify-center transition-colors">
                     <ArrowUpRight className="w-4 h-4" />
                   </div>
                 </div>

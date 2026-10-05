@@ -43,17 +43,17 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-24 sm:py-32 px-4 sm:px-6 md:px-10 max-w-4xl mx-auto border-t border-white/10">
+    <section className="py-24 sm:py-32 px-4 sm:px-6 md:px-10 max-w-4xl mx-auto border-t border-black/10">
       {/* Header */}
       <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono text-[#a2e435]">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#a2e435]" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-[#5e9c04] font-semibold">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#84cc16]" />
           <span>Clarity & Answers</span>
         </div>
-        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white uppercase font-mono">
+        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-900 uppercase font-mono">
           Frequently Asked Questions
         </h2>
-        <p className="text-sm sm:text-base text-white/60">
+        <p className="text-sm sm:text-base text-zinc-600">
           This is different — we get that. You may have questions, and here are answers straight from our design team.
         </p>
       </div>
@@ -71,8 +71,8 @@ export default function FAQSection() {
               transition={{ duration: 0.3, delay: idx * 0.05 }}
               className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                 isOpen
-                  ? "bg-[#111111] border-[#a2e435]/50 shadow-[0_0_20px_rgba(162,228,53,0.08)]"
-                  : "bg-white/[0.02] border-white/10 hover:border-white/20 hover:bg-white/[0.04]"
+                  ? "bg-white border-black shadow-[0_4px_20px_rgba(0,0,0,0.06)]"
+                  : "bg-[#f9f9fb] border-black/10 hover:border-black/25 hover:bg-white"
               }`}
             >
               <button
@@ -80,14 +80,14 @@ export default function FAQSection() {
                 className="w-full py-5 px-6 sm:px-8 flex items-center justify-between text-left gap-4 cursor-pointer"
                 aria-expanded={isOpen}
               >
-                <span className="text-base sm:text-lg font-semibold text-white tracking-tight">
+                <span className="text-base sm:text-lg font-semibold text-zinc-900 tracking-tight">
                   {faq.q}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full border flex items-center justify-center flex-shrink-0 transition-transform duration-300 ${
                     isOpen
-                      ? "bg-[#a2e435] border-[#a2e435] text-black rotate-45"
-                      : "bg-white/5 border-white/10 text-white/60"
+                      ? "bg-black border-black text-white rotate-45"
+                      : "bg-black/5 border-black/10 text-zinc-600"
                   }`}
                 >
                   <Plus className="w-4 h-4" />
@@ -102,7 +102,7 @@ export default function FAQSection() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                   >
-                    <div className="px-6 sm:px-8 pb-6 text-sm sm:text-base text-white/70 leading-relaxed border-t border-white/5 pt-4 font-normal">
+                    <div className="px-6 sm:px-8 pb-6 text-sm sm:text-base text-zinc-600 leading-relaxed border-t border-black/5 pt-4 font-normal">
                       {faq.a}
                     </div>
                   </motion.div>

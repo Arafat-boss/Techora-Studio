@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Card3DTilt from "./Card3DTilt";
 
-// SVG Brand Icons
 function XIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -39,42 +38,36 @@ export default function TeamSection() {
       role: "Lead Product Designer",
       avatar: "/images/i1HQmHKuaqVIiFDDbnxu3eSvDM.png",
       bio: "Focuses on industrial hardware, tactile ergonomics, and spatial design.",
-      socials: { twitter: "#", linkedin: "#", dribbble: "#" },
     },
     {
       name: "Ethan Vance",
       role: "Design Engineer",
       avatar: "/images/A4gp1uK8IPCXRgoVMvD6es6rXc.png",
       bio: "Bridges mechanical prototyping, WebGL rendering, and production code.",
-      socials: { twitter: "#", linkedin: "#", dribbble: "#" },
     },
     {
       name: "Morgan Sterling",
       role: "Creative Director",
       avatar: "/images/t2IinwzJVpnMsudq7WYMD5Q.png",
       bio: "Directs visionary brand systems, typography, and identity architecture.",
-      socials: { twitter: "#", linkedin: "#", dribbble: "#" },
     },
     {
       name: "Sofia Chen",
       role: "Lead UI / UX Designer",
       avatar: "/images/xF67o9KL2pdUNFoIyhGVuR7nzI.png",
       bio: "Specializes in multi-platform design tokens and micro-interaction craft.",
-      socials: { twitter: "#", linkedin: "#", dribbble: "#" },
     },
     {
       name: "Noah Reynolds",
       role: "Framer & Web Engineer",
       avatar: "/images/Bwqsulc9a1MtU5g4fle62Cp4E.png",
-      bio: "Builds high-performance Next.js architectures and fluid Framer animations.",
-      socials: { twitter: "#", linkedin: "#", dribbble: "#" },
+      bio: "Builds high-performance Next.js architectures and fluid animations.",
     },
     {
       name: "Olivia Thorne",
       role: "Head of Project Delivery",
       avatar: "/images/7QzAJUIdfcX0NgIDOeWiBZaU1A.png",
       bio: "Coordinates timeline precision, client communications, and launch agility.",
-      socials: { twitter: "#", linkedin: "#", dribbble: "#" },
     },
   ];
 
@@ -83,20 +76,20 @@ export default function TeamSection() {
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono text-[#a2e435] mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#a2e435]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-[#5e9c04] mb-4 font-semibold">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#84cc16]" />
             <span>Creative Minds</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white">
+          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-900">
             The Designers & Engineers Behind <br />
-            <span className="font-serif-italic font-normal text-white/90">Every Breakthrough</span>
+            <span className="font-serif-italic font-normal text-zinc-700">Every Breakthrough</span>
           </h2>
         </div>
 
         <div className="flex items-center gap-3">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-white text-black hover:bg-[#a2e435] font-semibold text-xs uppercase tracking-wider px-5 py-3 rounded-full transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center gap-2 bg-black text-white hover:bg-zinc-800 font-semibold text-xs uppercase tracking-wider px-5 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-sm"
           >
             <span>Schedule a call</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
@@ -116,18 +109,18 @@ export default function TeamSection() {
           >
             <Card3DTilt
               cursorText="View Profile"
-              className="bg-[#0e0e0e] border border-white/10 hover:border-[#a2e435]/40 rounded-3xl p-5 sm:p-6 transition-all duration-300 group shadow-xl relative overflow-hidden"
+              className="bg-white border border-black/10 hover:border-black/30 rounded-3xl p-5 sm:p-6 transition-all duration-300 group shadow-[0_4px_24px_rgba(0,0,0,0.06)] relative overflow-hidden"
             >
               {/* Corner crosshairs */}
-              <span className="absolute top-2.5 left-2.5 text-white/20 group-hover:text-[#a2e435]/60 transition-colors font-mono text-[10px]">
+              <span className="absolute top-2.5 left-2.5 text-zinc-300 group-hover:text-zinc-700 transition-colors font-mono text-[10px]">
                 +
               </span>
-              <span className="absolute top-2.5 right-2.5 text-white/20 group-hover:text-[#a2e435]/60 transition-colors font-mono text-[10px]">
+              <span className="absolute top-2.5 right-2.5 text-zinc-300 group-hover:text-zinc-700 transition-colors font-mono text-[10px]">
                 +
               </span>
 
               {/* Avatar image container */}
-              <div className="relative aspect-square rounded-2xl overflow-hidden bg-black/60 border border-white/5 mb-5 flex items-center justify-center">
+              <div className="relative aspect-square rounded-2xl overflow-hidden bg-zinc-100 border border-black/5 mb-5 flex items-center justify-center">
                 <Image
                   src={member.avatar}
                   alt={member.name}
@@ -135,22 +128,22 @@ export default function TeamSection() {
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
                 
                 {/* Social icons overlay on hover */}
                 <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex items-center gap-1.5">
-                    <span className="w-7 h-7 rounded-full bg-black/80 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:text-[#a2e435] transition-colors cursor-pointer p-1.5">
+                    <span className="w-7 h-7 rounded-full bg-black/80 backdrop-blur-md text-white flex items-center justify-center hover:bg-black transition-colors cursor-pointer p-1.5">
                       <XIcon className="w-full h-full" />
                     </span>
-                    <span className="w-7 h-7 rounded-full bg-black/80 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:text-[#a2e435] transition-colors cursor-pointer p-1.5">
+                    <span className="w-7 h-7 rounded-full bg-black/80 backdrop-blur-md text-white flex items-center justify-center hover:bg-black transition-colors cursor-pointer p-1.5">
                       <LinkedInIcon className="w-full h-full" />
                     </span>
-                    <span className="w-7 h-7 rounded-full bg-black/80 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:text-[#a2e435] transition-colors cursor-pointer p-1.5">
+                    <span className="w-7 h-7 rounded-full bg-black/80 backdrop-blur-md text-white flex items-center justify-center hover:bg-black transition-colors cursor-pointer p-1.5">
                       <DribbbleIcon className="w-full h-full" />
                     </span>
                   </div>
-                  <span className="text-[10px] font-mono text-[#a2e435] bg-black/80 px-2 py-0.5 rounded-full border border-[#a2e435]/30">
+                  <span className="text-[10px] font-mono text-white bg-black/80 px-2 py-0.5 rounded-full">
                     Active
                   </span>
                 </div>
@@ -158,13 +151,13 @@ export default function TeamSection() {
 
               {/* Info Text */}
               <div>
-                <span className="text-xs font-mono text-[#a2e435] uppercase tracking-wider block mb-1">
+                <span className="text-xs font-mono text-[#5e9c04] uppercase tracking-wider block mb-1 font-semibold">
                   {member.role}
                 </span>
-                <h3 className="text-xl font-bold text-white group-hover:text-[#a2e435] transition-colors">
+                <h3 className="text-xl font-bold text-zinc-900 group-hover:text-black transition-colors">
                   {member.name}
                 </h3>
-                <p className="text-xs sm:text-sm text-white/60 mt-2 line-clamp-2 leading-relaxed font-normal">
+                <p className="text-xs sm:text-sm text-zinc-600 mt-2 line-clamp-2 leading-relaxed font-normal">
                   {member.bio}
                 </p>
               </div>

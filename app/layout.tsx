@@ -30,7 +30,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Techora — Next-Gen Hardware, Digital Products & Brand Systems",
   description: "A precision design studio crafted for breakthrough physical hardware, tactile computing, next-gen digital experiences, and visionary brand systems.",
-  keywords: ["design studio", "hardware design", "digital products", "brand systems", "nextjs", "framer template", "techora"],
+  keywords: ["design studio", "hardware design", "digital products", "brand systems", "nextjs", "techora"],
   openGraph: {
     title: "Techora — Design for Everyone",
     description: "Thoughtful design across brands, products, and digital experiences.",
@@ -46,9 +46,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${instrumentSans.variable} ${newsreader.variable} ${jetbrainsMono.variable} dark antialiased scroll-smooth`}
+      className={`${instrumentSans.variable} ${newsreader.variable} ${jetbrainsMono.variable} antialiased scroll-smooth`}
     >
-      <body className="bg-black text-white selection:bg-[#a2e435] selection:text-black font-sans min-h-screen flex flex-col relative overflow-x-hidden">
+      <body className="bg-white text-zinc-900 selection:bg-[#84cc16] selection:text-black font-sans min-h-screen flex flex-col relative overflow-x-hidden">
         <CustomCursor />
         <Navbar />
         <main className="flex-1 w-full relative z-10">{children}</main>

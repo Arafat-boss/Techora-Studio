@@ -142,14 +142,14 @@ export default function GalleryPage() {
     <div className="pt-32 sm:pt-40 pb-20 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
       {/* Page Header */}
       <div className="max-w-3xl mb-12 space-y-4">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono text-[#a2e435]">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#a2e435]" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-[#5e9c04] font-semibold">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#84cc16]" />
           <span>Physical & Digital Archive</span>
         </div>
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white">
-          Gallery of <span className="font-serif-italic font-normal text-[#a2e435]">Form & Craft</span>
+        <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-zinc-900">
+          Gallery of <span className="font-serif-italic font-normal text-zinc-700">Form & Craft</span>
         </h1>
-        <p className="text-sm sm:text-base text-white/60 max-w-2xl font-normal leading-relaxed">
+        <p className="text-sm sm:text-base text-zinc-600 max-w-2xl font-normal leading-relaxed">
           Carefully designed objects focused on form, usability, ergonomics, and manufacturable detail across modern consumer devices.
         </p>
       </div>
@@ -164,8 +164,8 @@ export default function GalleryPage() {
               onClick={() => setSelectedCategory(cat)}
               className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all whitespace-nowrap cursor-pointer ${
                 isActive
-                  ? "bg-[#a2e435] text-black font-semibold shadow-[0_0_15px_rgba(162,228,53,0.3)]"
-                  : "bg-white/[0.04] hover:bg-white/[0.08] text-white/70 hover:text-white border border-white/10"
+                  ? "bg-black text-white font-semibold shadow-sm"
+                  : "bg-black/[0.04] hover:bg-black/[0.08] text-zinc-600 hover:text-zinc-900 border border-black/10"
               }`}
             >
               {cat}
@@ -192,18 +192,18 @@ export default function GalleryPage() {
               <Card3DTilt
                 cursorText="View Object"
                 onClick={() => setActiveModalItem(item)}
-                className="cursor-pointer bg-[#0e0e0e] border border-white/10 hover:border-[#a2e435]/50 rounded-3xl p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 shadow-2xl relative group overflow-hidden"
+                className="cursor-pointer bg-white border border-black/10 hover:border-black/30 rounded-3xl p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.06)] relative group overflow-hidden"
               >
                 {/* Crosshairs */}
-                <span className="absolute top-3 left-3 text-white/20 group-hover:text-[#a2e435]/70 font-mono text-[10px]">
+                <span className="absolute top-3 left-3 text-zinc-300 group-hover:text-zinc-700 font-mono text-[10px]">
                   +
                 </span>
-                <span className="absolute top-3 right-3 text-white/20 group-hover:text-[#a2e435]/70 font-mono text-[10px]">
+                <span className="absolute top-3 right-3 text-zinc-300 group-hover:text-zinc-700 font-mono text-[10px]">
                   +
                 </span>
 
                 {/* Image */}
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-black/70 border border-white/5 mb-4 flex items-center justify-center">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-100 border border-black/5 mb-4 flex items-center justify-center">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -211,14 +211,14 @@ export default function GalleryPage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
                   
                   {/* Category Chip */}
-                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/10 text-[11px] font-mono text-white/80">
+                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md border border-black/10 text-[11px] font-mono text-zinc-900 shadow-sm">
                     {item.category}
                   </div>
 
-                  <div className="absolute top-3 right-3 px-2.5 py-0.5 rounded-full bg-white/10 backdrop-blur-md text-[10px] font-mono text-white/60">
+                  <div className="absolute top-3 right-3 px-2.5 py-0.5 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono text-white">
                     {item.year}
                   </div>
                 </div>
@@ -226,14 +226,14 @@ export default function GalleryPage() {
                 {/* Text Content */}
                 <div>
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-bold text-white group-hover:text-[#a2e435] transition-colors">
+                    <h3 className="text-lg font-bold text-zinc-900 group-hover:text-black transition-colors">
                       {item.title}
                     </h3>
-                    <div className="w-8 h-8 rounded-full bg-white/5 group-hover:bg-[#a2e435] group-hover:text-black flex items-center justify-center transition-colors">
+                    <div className="w-8 h-8 rounded-full bg-zinc-100 group-hover:bg-black group-hover:text-white text-zinc-700 flex items-center justify-center transition-colors">
                       <ArrowUpRight className="w-4 h-4" />
                     </div>
                   </div>
-                  <p className="text-xs text-white/60 mt-1.5 line-clamp-2 leading-relaxed">
+                  <p className="text-xs text-zinc-600 mt-1.5 line-clamp-2 leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -246,25 +246,25 @@ export default function GalleryPage() {
       {/* Lightbox / Detail Modal */}
       <AnimatePresence>
         {activeModalItem && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-xl">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/50 backdrop-blur-md">
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-[#111111] border border-white/15 rounded-3xl p-6 sm:p-8 max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative"
+              className="bg-white border border-black/15 rounded-3xl p-6 sm:p-8 max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative"
             >
               {/* Close Button */}
               <button
                 onClick={() => setActiveModalItem(null)}
-                className="absolute top-5 right-5 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 flex items-center justify-center text-white transition-colors cursor-pointer"
+                className="absolute top-5 right-5 w-10 h-10 rounded-full bg-zinc-100 hover:bg-zinc-200 border border-black/10 flex items-center justify-center text-zinc-900 transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center mt-4">
                 {/* Image */}
-                <div className="relative aspect-square rounded-2xl overflow-hidden bg-black/80 border border-white/10">
+                <div className="relative aspect-square rounded-2xl overflow-hidden bg-zinc-100 border border-black/10">
                   <Image
                     src={activeModalItem.image}
                     alt={activeModalItem.title}
@@ -277,33 +277,33 @@ export default function GalleryPage() {
                 {/* Details */}
                 <div className="space-y-4">
                   <div className="flex items-center gap-2">
-                    <span className="px-3 py-1 rounded-full bg-[#a2e435]/10 border border-[#a2e435]/30 text-xs font-mono text-[#a2e435]">
+                    <span className="px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-[#5e9c04] font-semibold">
                       {activeModalItem.category}
                     </span>
-                    <span className="text-xs font-mono text-white/40">
+                    <span className="text-xs font-mono text-zinc-400">
                       Release: {activeModalItem.year}
                     </span>
                   </div>
 
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-zinc-900 tracking-tight">
                     {activeModalItem.title}
                   </h3>
 
-                  <p className="text-sm text-white/70 leading-relaxed">
+                  <p className="text-sm text-zinc-600 leading-relaxed font-normal">
                     {activeModalItem.desc}
                   </p>
 
-                  <div className="space-y-2 pt-2 border-t border-white/10">
-                    <span className="text-xs font-mono uppercase text-white/40 tracking-wider block">
+                  <div className="space-y-2 pt-2 border-t border-black/10">
+                    <span className="text-xs font-mono uppercase text-zinc-400 tracking-wider block font-semibold">
                       Hardware Specifications:
                     </span>
                     <div className="grid grid-cols-1 gap-2">
                       {activeModalItem.specs.map((spec: string, sIdx: number) => (
                         <div
                           key={sIdx}
-                          className="flex items-center gap-2 text-xs font-mono text-white/90 bg-white/[0.03] px-3 py-2 rounded-lg border border-white/5"
+                          className="flex items-center gap-2 text-xs font-mono text-zinc-800 bg-[#f9f9fb] px-3 py-2 rounded-lg border border-black/5"
                         >
-                          <Check className="w-3.5 h-3.5 text-[#a2e435] flex-shrink-0" />
+                          <Check className="w-3.5 h-3.5 text-[#5e9c04] flex-shrink-0" />
                           <span>{spec}</span>
                         </div>
                       ))}
@@ -313,7 +313,7 @@ export default function GalleryPage() {
                   <div className="pt-4 flex items-center gap-3">
                     <button
                       onClick={() => setActiveModalItem(null)}
-                      className="w-full bg-[#a2e435] text-black font-semibold text-xs uppercase tracking-wider py-3 rounded-full hover:bg-[#83ca16] transition-colors"
+                      className="w-full bg-black text-white font-semibold text-xs uppercase tracking-wider py-3 rounded-full hover:bg-zinc-800 transition-colors cursor-pointer"
                     >
                       Close Preview
                     </button>

@@ -45,34 +45,34 @@ export default function PrivacyPolicyPage() {
     <div className="pt-32 sm:pt-40 pb-20 px-4 sm:px-6 md:px-10 max-w-4xl mx-auto">
       <Link
         href="/"
-        className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-white/60 hover:text-[#a2e435] transition-colors mb-8 group"
+        className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-zinc-500 hover:text-black transition-colors mb-8 group"
       >
         <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" />
         <span>Return Home</span>
       </Link>
 
       <div className="space-y-4 mb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono text-[#a2e435]">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-[#5e9c04] font-semibold">
           <Shield className="w-3.5 h-3.5" />
           <span>Legal Documentation</span>
         </div>
-        <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white">
-          Privacy <span className="font-serif-italic font-normal text-[#a2e435]">Policy</span>
+        <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-zinc-900">
+          Privacy <span className="font-serif-italic font-normal text-zinc-700">Policy</span>
         </h1>
-        <div className="flex items-center gap-3 text-xs font-mono text-white/40 pt-1">
+        <div className="flex items-center gap-3 text-xs font-mono text-zinc-400 pt-1">
           <span>EFFECTIVE DATE: JANUARY 19, 2026</span>
           <span>•</span>
           <span>VERSION 2.4</span>
         </div>
       </div>
 
-      <div className="space-y-8 bg-[#0a0a0a] border border-white/10 p-8 sm:p-12 rounded-3xl shadow-2xl">
+      <div className="space-y-8 bg-white border border-black/10 p-8 sm:p-12 rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
         {sections.map((sec, idx) => (
-          <div key={idx} className="space-y-3 pb-6 border-b border-white/5 last:border-0 last:pb-0">
-            <h2 className="text-xl font-bold text-white tracking-tight">
+          <div key={idx} className="space-y-3 pb-6 border-b border-black/5 last:border-0 last:pb-0">
+            <h2 className="text-xl font-bold text-zinc-900 tracking-tight">
               {sec.title}
             </h2>
-            <p className="text-sm sm:text-base text-white/70 leading-relaxed font-normal">
+            <p className="text-sm sm:text-base text-zinc-600 leading-relaxed font-normal">
               {sec.content}
             </p>
           </div>

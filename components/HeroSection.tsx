@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Sparkles, Compass } from "lucide-react";
+import { ArrowUpRight, Compass } from "lucide-react";
 import Card3DTilt from "./Card3DTilt";
 
 export default function HeroSection() {
@@ -40,39 +40,36 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative w-full pt-36 sm:pt-44 pb-20 px-4 sm:px-6 md:px-10 overflow-hidden min-h-[92vh] flex flex-col justify-between">
-      {/* Full Hero Section Background Image (Pure Image & Clean Lighting, No Green Glow) */}
+    <section className="relative w-full pt-36 sm:pt-44 pb-20 px-4 sm:px-6 md:px-10 overflow-hidden min-h-[90vh] flex flex-col justify-between">
+      {/* Full Hero Section Background Image */}
       <div className="absolute inset-0 w-full h-full pointer-events-none -z-10 select-none overflow-hidden">
         <Image
           src="/images/CKjpQCXbgdY4rJr7UEGzaixoAe8.webp"
           alt="Techora Studio Hero Background"
           fill
-          className="object-cover object-center scale-105 brightness-105 contrast-[1.02]"
+          className="object-cover object-center scale-105 opacity-85"
           priority
           quality={100}
         />
-        {/* Clean Natural Dark Vignettes without green tint */}
-        <div className="absolute inset-0 bg-black/25" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40" />
-        
-        {/* Soft Neutral Center Depth */}
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-white/[0.06] blur-[150px] pointer-events-none rounded-full" />
+        {/* Soft Vignette blending cleanly into White */}
+        <div className="absolute inset-0 bg-white/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-white/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-transparent to-white/60" />
       </div>
 
       {/* Main Hero Header Content */}
       <div className="max-w-5xl mx-auto w-full flex flex-col items-center text-center space-y-6 relative z-10">
-        {/* Sub-eyebrow with editorial serif (Pure White & Clean Typography) */}
+        {/* Sub-eyebrow with editorial serif */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-base sm:text-xl text-white/90 font-serif-italic max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]"
+          className="text-base sm:text-xl text-zinc-700 font-serif-italic max-w-xl"
         >
           Thoughtful design across{" "}
-          <span className="text-white not-italic font-semibold">brands</span>,{" "}
-          <span className="text-white not-italic font-semibold">physical products</span>, and{" "}
-          <span className="text-white font-serif-italic font-medium">digital experiences</span>
+          <span className="text-zinc-900 not-italic font-semibold">brands</span>,{" "}
+          <span className="text-zinc-900 not-italic font-semibold">physical products</span>, and{" "}
+          <span className="text-zinc-900 font-serif-italic font-medium">digital experiences</span>
         </motion.p>
 
         {/* Main H1 Title */}
@@ -80,9 +77,9 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white leading-[1.02] drop-shadow-[0_4px_25px_rgba(0,0,0,0.9)]"
+          className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-zinc-900 leading-[1.02]"
         >
-          Design for <span className="font-serif-italic font-normal text-white">Everyone</span>
+          Design for <span className="font-serif-italic font-normal text-zinc-800">Everyone</span>
         </motion.h1>
 
         {/* Studio Subtitle */}
@@ -90,7 +87,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-sm sm:text-base md:text-lg text-white/85 max-w-2xl font-normal leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]"
+          className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl font-normal leading-relaxed"
         >
           We help ideas become clear, usable, and beautifully crafted. A multidisciplinary design and engineering studio translating visionary concepts into iconic physical and digital realities.
         </motion.p>
@@ -104,7 +101,7 @@ export default function HeroSection() {
         >
           <Link
             href="/contact"
-            className="group relative inline-flex items-center gap-2 bg-white text-black hover:bg-white/90 font-bold text-sm px-8 py-4 rounded-full transition-all duration-300 shadow-[0_0_35px_rgba(255,255,255,0.25)] hover:scale-105 active:scale-95 cursor-pointer"
+            className="group relative inline-flex items-center gap-2 bg-black text-white hover:bg-zinc-800 font-bold text-sm px-8 py-4 rounded-full transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:scale-105 active:scale-95 cursor-pointer"
           >
             <span>Schedule a call</span>
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -112,10 +109,10 @@ export default function HeroSection() {
 
           <Link
             href="/gallery"
-            className="inline-flex items-center gap-2 bg-black/70 hover:bg-black/90 border border-white/25 hover:border-white/50 text-white font-medium text-sm px-7 py-4 rounded-full transition-all duration-200 backdrop-blur-xl shadow-xl"
+            className="inline-flex items-center gap-2 bg-white/90 hover:bg-white border border-black/10 hover:border-black/25 text-zinc-900 font-medium text-sm px-7 py-4 rounded-full transition-all duration-200 backdrop-blur-xl shadow-sm"
             data-cursor-text="Explore Gallery"
           >
-            <Compass className="w-4 h-4 text-white/80" />
+            <Compass className="w-4 h-4 text-zinc-700" />
             <span>Explore Showcase</span>
           </Link>
         </motion.div>
@@ -133,18 +130,18 @@ export default function HeroSection() {
             <Link href={`/gallery`} className="block group">
               <Card3DTilt
                 cursorText="Preview gallery"
-                className="bg-[#0e0e0e]/85 backdrop-blur-xl border border-white/15 group-hover:border-white/40 rounded-2xl p-3.5 flex flex-col justify-between transition-all duration-300 shadow-[0_15px_35px_rgba(0,0,0,0.7)] relative overflow-hidden"
+                className="bg-white/90 backdrop-blur-xl border border-black/10 group-hover:border-black/30 rounded-2xl p-3.5 flex flex-col justify-between transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.06)] relative overflow-hidden"
               >
                 {/* Corner Crosshair Decoration */}
-                <div className="absolute top-2 left-2 text-white/30 group-hover:text-white/80 transition-colors font-mono text-[10px]">
+                <div className="absolute top-2 left-2 text-zinc-300 group-hover:text-zinc-700 transition-colors font-mono text-[10px]">
                   +
                 </div>
-                <div className="absolute top-2 right-2 text-white/30 group-hover:text-white/80 transition-colors font-mono text-[10px]">
+                <div className="absolute top-2 right-2 text-zinc-300 group-hover:text-zinc-700 transition-colors font-mono text-[10px]">
                   +
                 </div>
 
                 {/* Product Image Area */}
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-black/80 border border-white/10 flex items-center justify-center group-hover:scale-[1.02] transition-transform duration-500">
+                <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-100 border border-black/5 flex items-center justify-center group-hover:scale-[1.02] transition-transform duration-500">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -152,10 +149,10 @@ export default function HeroSection() {
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
                   
                   {/* Category Pill */}
-                  <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-[11px] font-mono text-white/90">
+                  <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md border border-black/10 text-[11px] font-mono text-zinc-900 shadow-sm">
                     {item.category}
                   </div>
                 </div>
@@ -163,14 +160,14 @@ export default function HeroSection() {
                 {/* Info Text */}
                 <div className="p-3 pt-4 flex items-center justify-between">
                   <div>
-                    <h2 className="text-base font-semibold text-white group-hover:text-white transition-colors">
+                    <h2 className="text-base font-semibold text-zinc-900 group-hover:text-black transition-colors">
                       {item.title}
                     </h2>
-                    <p className="text-xs text-white/60 line-clamp-1 mt-0.5">
+                    <p className="text-xs text-zinc-500 line-clamp-1 mt-0.5">
                       {item.desc}
                     </p>
                   </div>
-                  <div className="w-8 h-8 rounded-full bg-white/10 group-hover:bg-white group-hover:text-black text-white/70 flex items-center justify-center transition-all flex-shrink-0 ml-2">
+                  <div className="w-8 h-8 rounded-full bg-zinc-100 group-hover:bg-black group-hover:text-white text-zinc-700 flex items-center justify-center transition-all flex-shrink-0 ml-2">
                     <ArrowUpRight className="w-4 h-4" />
                   </div>
                 </div>
