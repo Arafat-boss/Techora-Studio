@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Sparkles, ChevronRight, Compass } from "lucide-react";
+import { ArrowUpRight, Sparkles, Compass } from "lucide-react";
 import Card3DTilt from "./Card3DTilt";
 
 export default function HeroSection() {
@@ -62,21 +62,6 @@ export default function HeroSection() {
 
       {/* Main Hero Header Content */}
       <div className="max-w-5xl mx-auto w-full flex flex-col items-center text-center space-y-6 relative z-10">
-        {/* Eyebrow / Status pill */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-black/60 border border-white/20 text-xs font-mono text-white shadow-[0_0_20px_rgba(0,0,0,0.6)] backdrop-blur-xl"
-        >
-          <span className="w-2 h-2 rounded-full bg-[#a2e435] shadow-[0_0_10px_#a2e435] animate-pulse" />
-          <span>Next-Gen Design & Technology Studio</span>
-          <span className="text-white/40">|</span>
-          <span className="text-white/90 flex items-center gap-1 font-sans font-medium">
-            Available for Q1/Q2 <ChevronRight className="w-3 h-3 text-white/50" />
-          </span>
-        </motion.div>
-
         {/* Sub-eyebrow with editorial serif (Pure White & Clean Typography) */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
