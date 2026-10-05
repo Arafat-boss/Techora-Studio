@@ -31,6 +31,14 @@ export const metadata: Metadata = {
   title: "Techora — Next-Gen Hardware, Digital Products & Brand Systems",
   description: "A precision design studio crafted for breakthrough physical hardware, tactile computing, next-gen digital experiences, and visionary brand systems.",
   keywords: ["design studio", "hardware design", "digital products", "brand systems", "nextjs", "techora"],
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   openGraph: {
     title: "Techora — Design for Everyone",
     description: "Thoughtful design across brands, products, and digital experiences.",
