@@ -40,22 +40,25 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative w-full pt-36 sm:pt-44 pb-20 px-4 sm:px-6 md:px-10 overflow-hidden min-h-[90vh] flex flex-col justify-between">
-      {/* Full Hero Section Background Image */}
+    <section className="relative w-full pt-36 sm:pt-44 pb-20 px-4 sm:px-6 md:px-10 overflow-hidden min-h-[92vh] flex flex-col justify-between">
+      {/* Full Hero Section Background Image with Enhanced Lighting */}
       <div className="absolute inset-0 w-full h-full pointer-events-none -z-10 select-none overflow-hidden">
         <Image
           src="/images/CKjpQCXbgdY4rJr7UEGzaixoAe8.webp"
           alt="Techora Studio Hero Background"
           fill
-          className="object-cover object-center scale-105"
+          className="object-cover object-center scale-105 brightness-110 contrast-[1.05]"
           priority
-          quality={95}
+          quality={100}
         />
-        {/* Layered Cinematic Vignettes and Gradients */}
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-black/80" />
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#a2e435]/15 blur-[160px] pointer-events-none rounded-full" />
+        {/* Lighter Cinematic Overlays & Ambient Radiance */}
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50" />
+        
+        {/* Bright Glowing Ambient Center Light */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[#a2e435]/25 blur-[170px] pointer-events-none rounded-full mix-blend-screen" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-white/10 blur-[130px] pointer-events-none rounded-full" />
       </div>
 
       {/* Main Hero Header Content */}
@@ -65,11 +68,11 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-black/70 border border-white/15 text-xs font-mono text-white/90 shadow-2xl backdrop-blur-xl"
+          className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-black/60 border border-white/25 text-xs font-mono text-white shadow-[0_0_20px_rgba(0,0,0,0.6)] backdrop-blur-xl"
         >
-          <span className="w-2 h-2 rounded-full bg-[#a2e435] shadow-[0_0_10px_#a2e435] animate-pulse" />
+          <span className="w-2 h-2 rounded-full bg-[#a2e435] shadow-[0_0_12px_#a2e435] animate-pulse" />
           <span>Next-Gen Design & Technology Studio</span>
-          <span className="text-white/30">|</span>
+          <span className="text-white/40">|</span>
           <span className="text-[#a2e435] flex items-center gap-1 font-sans font-medium">
             Available for Q1/Q2 <ChevronRight className="w-3 h-3" />
           </span>
@@ -80,12 +83,12 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-base sm:text-xl text-white/80 font-serif-italic max-w-xl drop-shadow-md"
+          className="text-base sm:text-xl text-white/90 font-serif-italic max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]"
         >
           Thoughtful design across{" "}
-          <span className="text-white not-italic font-medium">brands</span>,{" "}
-          <span className="text-white not-italic font-medium">physical products</span>, and{" "}
-          <span className="text-[#a2e435] font-serif-italic">digital experiences</span>
+          <span className="text-white not-italic font-semibold">brands</span>,{" "}
+          <span className="text-white not-italic font-semibold">physical products</span>, and{" "}
+          <span className="text-[#a2e435] font-serif-italic font-medium">digital experiences</span>
         </motion.p>
 
         {/* Main H1 Title */}
@@ -93,9 +96,9 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white leading-[1.02] drop-shadow-2xl"
+          className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white leading-[1.02] drop-shadow-[0_4px_25px_rgba(0,0,0,0.9)]"
         >
-          Design for <span className="font-serif-italic font-normal text-white/95">Everyone</span>
+          Design for <span className="font-serif-italic font-normal text-white">Everyone</span>
         </motion.h1>
 
         {/* Studio Subtitle */}
@@ -103,7 +106,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-sm sm:text-base md:text-lg text-white/80 max-w-2xl font-normal leading-relaxed drop-shadow"
+          className="text-sm sm:text-base md:text-lg text-white/90 max-w-2xl font-normal leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]"
         >
           We help ideas become clear, usable, and beautifully crafted. A multidisciplinary design and engineering studio translating visionary concepts into iconic physical and digital realities.
         </motion.p>
@@ -117,7 +120,7 @@ export default function HeroSection() {
         >
           <Link
             href="/contact"
-            className="group relative inline-flex items-center gap-2 bg-white text-black hover:bg-[#a2e435] font-bold text-sm px-8 py-4 rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:shadow-[0_0_35px_rgba(162,228,53,0.5)] hover:scale-105 active:scale-95 cursor-pointer"
+            className="group relative inline-flex items-center gap-2 bg-white text-black hover:bg-[#a2e435] font-bold text-sm px-8 py-4 rounded-full transition-all duration-300 shadow-[0_0_35px_rgba(255,255,255,0.25)] hover:shadow-[0_0_40px_rgba(162,228,53,0.6)] hover:scale-105 active:scale-95 cursor-pointer"
           >
             <span>Schedule a call</span>
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -125,7 +128,7 @@ export default function HeroSection() {
 
           <Link
             href="/gallery"
-            className="inline-flex items-center gap-2 bg-black/60 hover:bg-black/80 border border-white/20 hover:border-white/40 text-white font-medium text-sm px-7 py-4 rounded-full transition-all duration-200 backdrop-blur-xl shadow-lg"
+            className="inline-flex items-center gap-2 bg-black/70 hover:bg-black/90 border border-white/25 hover:border-white/50 text-white font-medium text-sm px-7 py-4 rounded-full transition-all duration-200 backdrop-blur-xl shadow-xl"
             data-cursor-text="Explore Gallery"
           >
             <Compass className="w-4 h-4 text-[#a2e435]" />
@@ -146,18 +149,18 @@ export default function HeroSection() {
             <Link href={`/gallery`} className="block group">
               <Card3DTilt
                 cursorText="Preview gallery"
-                className="bg-[#0e0e0e]/90 backdrop-blur-md border border-white/10 group-hover:border-[#a2e435]/50 rounded-2xl p-3.5 flex flex-col justify-between transition-all duration-300 shadow-2xl relative overflow-hidden"
+                className="bg-[#0e0e0e]/85 backdrop-blur-xl border border-white/15 group-hover:border-[#a2e435]/60 rounded-2xl p-3.5 flex flex-col justify-between transition-all duration-300 shadow-[0_15px_35px_rgba(0,0,0,0.7)] relative overflow-hidden"
               >
                 {/* Corner Crosshair Decoration */}
-                <div className="absolute top-2 left-2 text-white/20 group-hover:text-[#a2e435]/60 transition-colors font-mono text-[10px]">
+                <div className="absolute top-2 left-2 text-white/30 group-hover:text-[#a2e435] transition-colors font-mono text-[10px]">
                   +
                 </div>
-                <div className="absolute top-2 right-2 text-white/20 group-hover:text-[#a2e435]/60 transition-colors font-mono text-[10px]">
+                <div className="absolute top-2 right-2 text-white/30 group-hover:text-[#a2e435] transition-colors font-mono text-[10px]">
                   +
                 </div>
 
                 {/* Product Image Area */}
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-black/80 border border-white/5 flex items-center justify-center group-hover:scale-[1.02] transition-transform duration-500">
+                <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-black/80 border border-white/10 flex items-center justify-center group-hover:scale-[1.02] transition-transform duration-500">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -179,11 +182,11 @@ export default function HeroSection() {
                     <h2 className="text-base font-semibold text-white group-hover:text-[#a2e435] transition-colors">
                       {item.title}
                     </h2>
-                    <p className="text-xs text-white/50 line-clamp-1 mt-0.5">
+                    <p className="text-xs text-white/60 line-clamp-1 mt-0.5">
                       {item.desc}
                     </p>
                   </div>
-                  <div className="w-8 h-8 rounded-full bg-white/5 group-hover:bg-[#a2e435] group-hover:text-black text-white/60 flex items-center justify-center transition-all flex-shrink-0 ml-2">
+                  <div className="w-8 h-8 rounded-full bg-white/10 group-hover:bg-[#a2e435] group-hover:text-black text-white/70 flex items-center justify-center transition-all flex-shrink-0 ml-2">
                     <ArrowUpRight className="w-4 h-4" />
                   </div>
                 </div>
