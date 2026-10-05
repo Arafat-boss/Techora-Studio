@@ -34,10 +34,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico" },
+      { url: "/icon", type: "image/png" },
     ],
     shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
+    apple: "/apple-icon",
   },
   openGraph: {
     title: "Techora — Design for Everyone",
