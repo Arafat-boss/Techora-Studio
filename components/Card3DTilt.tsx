@@ -16,10 +16,10 @@ interface Card3DTiltProps {
 export default function Card3DTilt({
   children,
   className = "",
-  maxTilt = 8,
-  maxMove = 10,
-  hoverScale = 1.025,
-  perspective = 900,
+  maxTilt = 6,
+  maxMove = 4,
+  hoverScale = 1.015,
+  perspective = 1000,
   cursorText,
   onClick,
 }: Card3DTiltProps) {

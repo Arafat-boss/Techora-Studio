@@ -66,7 +66,7 @@ export default function ArticleIndexPage() {
             <Link href={`/article/${article.slug}`} className="block group h-full">
               <Card3DTilt
                 cursorText="Read Article"
-                className="h-full bg-white border border-black/10 hover:border-black/30 rounded-3xl p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.06)] relative overflow-hidden"
+                className="h-full bg-white border border-black/10 hover:border-black/30 rounded-3xl p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.1)] relative"
               >
                 {/* Crosshairs */}
                 <span className="absolute top-3 left-3 text-zinc-300 group-hover:text-zinc-800 font-mono text-[10px]">

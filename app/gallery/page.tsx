@@ -192,7 +192,7 @@ export default function GalleryPage() {
               <Card3DTilt
                 cursorText="View Object"
                 onClick={() => setActiveModalItem(item)}
-                className="cursor-pointer bg-white border border-black/10 hover:border-black/30 rounded-3xl p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.06)] relative group overflow-hidden"
+                className="cursor-pointer bg-white border border-black/10 hover:border-black/30 rounded-3xl p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.1)] relative group"
               >
                 {/* Crosshairs */}
                 <span className="absolute top-3 left-3 text-zinc-300 group-hover:text-zinc-700 font-mono text-[10px]">

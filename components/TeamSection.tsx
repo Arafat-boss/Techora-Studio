@@ -109,7 +109,7 @@ export default function TeamSection() {
           >
             <Card3DTilt
               cursorText="View Profile"
-              className="bg-white border border-black/10 hover:border-black/30 rounded-3xl p-5 sm:p-6 transition-all duration-300 group shadow-[0_4px_24px_rgba(0,0,0,0.06)] relative overflow-hidden"
+              className="bg-white border border-black/10 hover:border-black/30 rounded-3xl p-5 sm:p-6 transition-all duration-300 group shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.1)] relative"
             >
               {/* Corner crosshairs */}
               <span className="absolute top-2.5 left-2.5 text-zinc-300 group-hover:text-zinc-700 transition-colors font-mono text-[10px]">

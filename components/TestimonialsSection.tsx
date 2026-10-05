@@ -166,7 +166,7 @@ export default function TestimonialsSection() {
       </div>
 
       {/* Dynamic Animated Grid of Testimonials */}
-      <div className="relative overflow-hidden">
+      <div className="relative -m-6 p-6 overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence mode="popLayout" initial={false}>
             {visibleItems.map((item, slotIdx) => {
@@ -205,7 +205,7 @@ export default function TestimonialsSection() {
                 >
                   <Card3DTilt
                     cursorText="Read Review"
-                    className="h-full bg-white border border-black/10 hover:border-black/30 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.06)] relative group overflow-hidden"
+                    className="h-full bg-white border border-black/10 hover:border-black/30 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.1)] relative group"
                   >
                     {/* Stars */}
                     <div>

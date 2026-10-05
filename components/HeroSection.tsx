@@ -130,7 +130,7 @@ export default function HeroSection() {
             <Link href={`/gallery`} className="block group">
               <Card3DTilt
                 cursorText="Preview gallery"
-                className="bg-white/95 backdrop-blur-xl border border-white/20 group-hover:border-white/50 rounded-2xl p-3.5 flex flex-col justify-between transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.25)] relative overflow-hidden"
+                className="bg-white/95 backdrop-blur-xl border border-white/20 group-hover:border-white/50 rounded-2xl p-3.5 flex flex-col justify-between transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.25)] relative"
               >
                 {/* Corner Crosshair Decoration */}
                 <div className="absolute top-2 left-2 text-zinc-300 group-hover:text-zinc-700 transition-colors font-mono text-[10px]">

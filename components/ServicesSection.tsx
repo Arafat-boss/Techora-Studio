@@ -107,7 +107,7 @@ export default function ServicesSection() {
             >
               <Card3DTilt
                 cursorText="Explore Service"
-                className="h-full bg-white border border-black/10 hover:border-black/30 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.06)] relative group overflow-hidden"
+                className="h-full bg-white border border-black/10 hover:border-black/30 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.1)] relative group"
               >
                 {/* Crosshairs at 4 corners */}
                 <span className="absolute top-3 left-3 text-zinc-300 group-hover:text-zinc-800 transition-colors font-mono text-xs">
