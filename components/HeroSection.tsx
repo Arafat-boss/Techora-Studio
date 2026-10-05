@@ -40,20 +40,34 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative pt-32 sm:pt-40 pb-20 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto overflow-hidden">
-      {/* Background ambient glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-[#a2e435]/15 via-emerald-500/5 to-transparent blur-[140px] pointer-events-none rounded-full" />
+    <section className="relative w-full pt-36 sm:pt-44 pb-20 px-4 sm:px-6 md:px-10 overflow-hidden min-h-[90vh] flex flex-col justify-between">
+      {/* Full Hero Section Background Image */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none -z-10 select-none overflow-hidden">
+        <Image
+          src="/images/CKjpQCXbgdY4rJr7UEGzaixoAe8.webp"
+          alt="Techora Studio Hero Background"
+          fill
+          className="object-cover object-center scale-105"
+          priority
+          quality={95}
+        />
+        {/* Layered Cinematic Vignettes and Gradients */}
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-black/80" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#a2e435]/15 blur-[160px] pointer-events-none rounded-full" />
+      </div>
 
-      {/* Hero Header Content */}
-      <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-6">
+      {/* Main Hero Header Content */}
+      <div className="max-w-5xl mx-auto w-full flex flex-col items-center text-center space-y-6 relative z-10">
         {/* Eyebrow / Status pill */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono text-white/80 shadow-lg backdrop-blur-md"
+          className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-black/70 border border-white/15 text-xs font-mono text-white/90 shadow-2xl backdrop-blur-xl"
         >
-          <span className="w-2 h-2 rounded-full bg-[#a2e435] shadow-[0_0_8px_#a2e435] animate-pulse" />
+          <span className="w-2 h-2 rounded-full bg-[#a2e435] shadow-[0_0_10px_#a2e435] animate-pulse" />
           <span>Next-Gen Design & Technology Studio</span>
           <span className="text-white/30">|</span>
           <span className="text-[#a2e435] flex items-center gap-1 font-sans font-medium">
@@ -66,7 +80,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-base sm:text-lg text-white/60 font-serif-italic max-w-xl"
+          className="text-base sm:text-xl text-white/80 font-serif-italic max-w-xl drop-shadow-md"
         >
           Thoughtful design across{" "}
           <span className="text-white not-italic font-medium">brands</span>,{" "}
@@ -79,9 +93,9 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white leading-[1.05]"
+          className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white leading-[1.02] drop-shadow-2xl"
         >
-          Design for <span className="font-serif-italic font-normal text-white/90">Everyone</span>
+          Design for <span className="font-serif-italic font-normal text-white/95">Everyone</span>
         </motion.h1>
 
         {/* Studio Subtitle */}
@@ -89,7 +103,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-sm sm:text-base md:text-lg text-white/70 max-w-2xl font-normal leading-relaxed"
+          className="text-sm sm:text-base md:text-lg text-white/80 max-w-2xl font-normal leading-relaxed drop-shadow"
         >
           We help ideas become clear, usable, and beautifully crafted. A multidisciplinary design and engineering studio translating visionary concepts into iconic physical and digital realities.
         </motion.p>
@@ -103,7 +117,7 @@ export default function HeroSection() {
         >
           <Link
             href="/contact"
-            className="group relative inline-flex items-center gap-2 bg-white text-black hover:bg-[#a2e435] font-semibold text-sm px-7 py-3.5 rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:shadow-[0_0_30px_rgba(162,228,53,0.4)] hover:scale-105 active:scale-95"
+            className="group relative inline-flex items-center gap-2 bg-white text-black hover:bg-[#a2e435] font-bold text-sm px-8 py-4 rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:shadow-[0_0_35px_rgba(162,228,53,0.5)] hover:scale-105 active:scale-95 cursor-pointer"
           >
             <span>Schedule a call</span>
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -111,7 +125,7 @@ export default function HeroSection() {
 
           <Link
             href="/gallery"
-            className="inline-flex items-center gap-2 bg-white/[0.05] hover:bg-white/[0.1] border border-white/15 hover:border-white/30 text-white font-medium text-sm px-6 py-3.5 rounded-full transition-all duration-200 backdrop-blur-md"
+            className="inline-flex items-center gap-2 bg-black/60 hover:bg-black/80 border border-white/20 hover:border-white/40 text-white font-medium text-sm px-7 py-4 rounded-full transition-all duration-200 backdrop-blur-xl shadow-lg"
             data-cursor-text="Explore Gallery"
           >
             <Compass className="w-4 h-4 text-[#a2e435]" />
@@ -121,7 +135,7 @@ export default function HeroSection() {
       </div>
 
       {/* Interactive 3D Showcase Grid */}
-      <div className="mt-16 sm:mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="max-w-7xl mx-auto w-full mt-20 sm:mt-28 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
         {showcaseItems.map((item, idx) => (
           <motion.div
             key={item.id}
@@ -132,7 +146,7 @@ export default function HeroSection() {
             <Link href={`/gallery`} className="block group">
               <Card3DTilt
                 cursorText="Preview gallery"
-                className="bg-[#0e0e0e] border border-white/10 group-hover:border-[#a2e435]/40 rounded-2xl p-3 flex flex-col justify-between transition-colors shadow-2xl relative overflow-hidden"
+                className="bg-[#0e0e0e]/90 backdrop-blur-md border border-white/10 group-hover:border-[#a2e435]/50 rounded-2xl p-3.5 flex flex-col justify-between transition-all duration-300 shadow-2xl relative overflow-hidden"
               >
                 {/* Corner Crosshair Decoration */}
                 <div className="absolute top-2 left-2 text-white/20 group-hover:text-[#a2e435]/60 transition-colors font-mono text-[10px]">
@@ -143,7 +157,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Product Image Area */}
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-black/60 border border-white/5 flex items-center justify-center group-hover:scale-[1.02] transition-transform duration-500">
+                <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-black/80 border border-white/5 flex items-center justify-center group-hover:scale-[1.02] transition-transform duration-500">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -152,9 +166,9 @@ export default function HeroSection() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
-
+                  
                   {/* Category Pill */}
-                  <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/10 text-[11px] font-mono text-white/80">
+                  <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-[11px] font-mono text-white/90">
                     {item.category}
                   </div>
                 </div>
