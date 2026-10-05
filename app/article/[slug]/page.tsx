@@ -40,7 +40,7 @@ export default async function ArticleDetailPage(props: {
       {/* Article Header */}
       <div className="space-y-6 mb-10">
         <div className="flex flex-wrap items-center gap-3">
-          <span className="px-3.5 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-[#5e9c04] font-semibold">
+          <span className="px-3.5 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-zinc-900 font-semibold">
             {article.category}
           </span>
           <span className="text-xs font-mono text-zinc-400 flex items-center gap-1.5">
@@ -78,7 +78,7 @@ export default async function ArticleDetailPage(props: {
               <div className="text-sm font-bold text-zinc-900">
                 {article.author.name}
               </div>
-              <div className="text-xs font-mono text-[#5e9c04]">
+              <div className="text-xs font-mono text-zinc-500">
                 {article.author.role}
               </div>
             </div>
@@ -118,7 +118,7 @@ export default async function ArticleDetailPage(props: {
                 key={pIdx}
                 className="flex items-start gap-3 bg-[#f9f9fb] border border-black/10 p-4 rounded-xl text-sm sm:text-base font-mono text-zinc-900"
               >
-                <CheckCircle2 className="w-5 h-5 text-[#5e9c04] flex-shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-5 h-5 text-zinc-900 flex-shrink-0 mt-0.5" />
                 <span>{paragraph.replace(/^\d\.\s*/, "")}</span>
               </div>
             );
@@ -146,7 +146,7 @@ export default async function ArticleDetailPage(props: {
       <div className="mt-20 pt-16 border-t border-black/10">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <span className="text-xs font-mono text-[#5e9c04] uppercase tracking-widest block mb-1 font-semibold">
+            <span className="text-xs font-mono text-zinc-900 uppercase tracking-widest block mb-1 font-semibold">
               Keep Reading
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 tracking-tight">
@@ -176,7 +176,7 @@ export default async function ArticleDetailPage(props: {
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
-                  <span className="text-xs font-mono text-[#5e9c04] block mb-1.5 font-semibold">
+                  <span className="text-xs font-mono text-zinc-900 block mb-1.5 font-semibold">
                     {rel.category}
                   </span>
                   <h3 className="text-lg font-bold text-zinc-900 group-hover:text-black transition-colors leading-snug">

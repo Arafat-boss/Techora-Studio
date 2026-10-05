@@ -71,15 +71,15 @@ export default function CustomCursor() {
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
             className="px-3.5 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-white text-[12px] font-mono whitespace-nowrap shadow-2xl flex items-center gap-2 -translate-x-1/2 -translate-y-1/2 text-white/90"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#a2e435] animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#B8FF4B] animate-pulse" />
             <span>{cursorText}</span>
           </motion.div>
         ) : (
           <motion.div
             animate={{
               scale: isPointer ? 1.6 : 1,
-              backgroundColor: isPointer ? "rgba(132, 204, 22, 0.4)" : "rgba(0, 0, 0, 0.15)",
-              borderColor: isPointer ? "rgba(94, 156, 4, 0.9)" : "rgba(0, 0, 0, 0.4)",
+              backgroundColor: isPointer ? "rgba(184, 255, 75, 0.4)" : "rgba(0, 0, 0, 0.15)",
+              borderColor: isPointer ? "#B8FF4B" : "rgba(0, 0, 0, 0.4)",
             }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
             className="w-3.5 h-3.5 rounded-full border -translate-x-1/2 -translate-y-1/2 backdrop-blur-xs"

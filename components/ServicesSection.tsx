@@ -79,8 +79,8 @@ export default function ServicesSection() {
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-[#5e9c04] mb-4 font-semibold">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#84cc16]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-zinc-900 mb-4 font-semibold">
+            <span className="w-2 h-2 rounded-full bg-[#B8FF4B]" />
             <span>Our Expertise</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-900">
@@ -155,7 +155,7 @@ export default function ServicesSection() {
                         key={fIdx}
                         className="flex items-center gap-2 text-xs text-zinc-700 font-mono bg-[#f9f9fb] border border-black/5 px-3 py-2 rounded-lg"
                       >
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#5e9c04] flex-shrink-0" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-zinc-900 flex-shrink-0" />
                         <span className="truncate">{feat}</span>
                       </div>
                     ))}

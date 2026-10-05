@@ -76,8 +76,8 @@ export default function TeamSection() {
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-[#5e9c04] mb-4 font-semibold">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#84cc16]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-zinc-900 mb-4 font-semibold">
+            <span className="w-2 h-2 rounded-full bg-[#B8FF4B]" />
             <span>Creative Minds</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-900">
@@ -151,7 +151,7 @@ export default function TeamSection() {
 
               {/* Info Text */}
               <div>
-                <span className="text-xs font-mono text-[#5e9c04] uppercase tracking-wider block mb-1 font-semibold">
+                <span className="text-xs font-mono text-zinc-500 uppercase tracking-wider block mb-1 font-semibold">
                   {member.role}
                 </span>
                 <h3 className="text-xl font-bold text-zinc-900 group-hover:text-black transition-colors">

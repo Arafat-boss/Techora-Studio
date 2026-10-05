@@ -22,8 +22,8 @@ export default function StudioStatement() {
     >
       <div className="flex flex-col items-start gap-6">
         {/* Eyebrow */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-[#5e9c04] font-semibold">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#84cc16]" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-zinc-900 font-semibold">
+          <span className="w-2 h-2 rounded-full bg-[#B8FF4B]" />
           <span>Studio Philosophy</span>
         </div>
 

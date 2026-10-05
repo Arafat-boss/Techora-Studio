@@ -31,10 +31,6 @@ export default function Footer() {
         {/* Top Action Row */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between pb-14 border-b border-black/10 gap-8">
           <div>
-            <span className="text-xs font-mono uppercase tracking-widest text-[#5e9c04] flex items-center gap-2 mb-3 font-semibold">
-              <Sparkles className="w-3.5 h-3.5" />
-              Start a Conversation
-            </span>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-900">
               Have a Project in Mind? <br />
               <span className="font-serif-italic font-normal text-zinc-700">Let's Build Something Iconic.</span>
@@ -67,7 +63,7 @@ export default function Footer() {
             {/* Live Time Badge */}
             <div className="pt-2">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-zinc-700">
-                <span className="w-2 h-2 rounded-full bg-[#84cc16] animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-[#B8FF4B] animate-pulse" />
                 <span>STUDIO TIME: {time || "12:00:00 PM EST"}</span>
               </div>
             </div>
@@ -83,18 +79,18 @@ export default function Footer() {
                 href="mailto:hello@techora.design"
                 className="hover:text-black transition-colors flex items-center gap-2"
               >
-                <Mail className="w-3.5 h-3.5 text-[#5e9c04]" />
+                <Mail className="w-3.5 h-3.5 text-zinc-900" />
                 hello@techora.design
               </a>
               <a
                 href="tel:+14155550198"
                 className="hover:text-black transition-colors flex items-center gap-2"
               >
-                <Phone className="w-3.5 h-3.5 text-[#5e9c04]" />
+                <Phone className="w-3.5 h-3.5 text-zinc-900" />
                 +1 (415) 555-0198
               </a>
               <div className="flex items-start gap-2 text-zinc-500 text-xs leading-relaxed pt-1">
-                <MapPin className="w-3.5 h-3.5 text-[#5e9c04] flex-shrink-0 mt-0.5" />
+                <MapPin className="w-3.5 h-3.5 text-zinc-900 flex-shrink-0 mt-0.5" />
                 <span>TechHub Plaza, Suite 301 Main St, Metro Tower Floor 15</span>
               </div>
             </div>
@@ -172,7 +168,7 @@ export default function Footer() {
             <Link href="/terms" className="hover:text-zinc-900 transition-colors">
               Terms of Service
             </Link>
-            <span className="text-[#5e9c04] font-medium">Crafted with Precision</span>
+            <span className="text-zinc-900 font-medium">Crafted with Precision</span>
           </div>
         </div>
       </div>

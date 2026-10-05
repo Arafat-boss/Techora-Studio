@@ -22,8 +22,8 @@ export default function ArticleIndexPage() {
     <div className="pt-32 sm:pt-40 pb-20 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
       {/* Page Header */}
       <div className="max-w-3xl mb-12 space-y-4">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-[#5e9c04] font-semibold">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#84cc16]" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-zinc-900 font-semibold">
+          <span className="w-2 h-2 rounded-full bg-[#B8FF4B]" />
           <span>Journal & Insights</span>
         </div>
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-zinc-900">

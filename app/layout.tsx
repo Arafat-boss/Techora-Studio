@@ -48,7 +48,7 @@ export default function RootLayout({
       lang="en"
       className={`${instrumentSans.variable} ${newsreader.variable} ${jetbrainsMono.variable} antialiased scroll-smooth`}
     >
-      <body className="bg-white text-zinc-900 selection:bg-[#84cc16] selection:text-black font-sans min-h-screen flex flex-col relative overflow-x-hidden">
+      <body className="bg-white text-zinc-900 selection:bg-[#B8FF4B] selection:text-black font-sans min-h-screen flex flex-col relative overflow-x-hidden">
         <CustomCursor />
         <Navbar />
         <main className="flex-1 w-full relative z-10">{children}</main>

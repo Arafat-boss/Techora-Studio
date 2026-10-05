@@ -60,8 +60,8 @@ export default function TestimonialsSection() {
     <section className="py-24 sm:py-32 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto border-t border-black/10">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-[#5e9c04] mb-4 font-semibold">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#84cc16]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-zinc-900 mb-4 font-semibold">
+            <span className="w-2 h-2 rounded-full bg-[#B8FF4B]" />
             <span>Client Praise</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-900">
@@ -105,9 +105,9 @@ export default function TestimonialsSection() {
             >
               {/* Stars */}
               <div>
-                <div className="flex items-center gap-1 text-[#84cc16] mb-6">
+                <div className="flex items-center gap-1 text-black mb-6">
                   {[...Array(item.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-[#84cc16]" />
+                    <Star key={i} className="w-4 h-4 fill-[#B8FF4B] text-[#B8FF4B]" />
                   ))}
                 </div>
 
@@ -134,7 +134,7 @@ export default function TestimonialsSection() {
                     {item.author}
                   </h4>
                   <p className="text-xs text-zinc-500 font-mono">
-                    {item.role} <span className="text-[#5e9c04] font-medium">{item.company}</span>
+                    {item.role} <span className="text-zinc-700 font-medium">{item.company}</span>
                   </p>
                 </div>
               </div>

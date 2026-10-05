@@ -46,8 +46,8 @@ export default function FAQSection() {
     <section className="py-24 sm:py-32 px-4 sm:px-6 md:px-10 max-w-4xl mx-auto border-t border-black/10">
       {/* Header */}
       <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-[#5e9c04] font-semibold">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#84cc16]" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-zinc-900 font-semibold">
+          <span className="w-2 h-2 rounded-full bg-[#B8FF4B]" />
           <span>Clarity & Answers</span>
         </div>
         <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-900 uppercase font-mono">

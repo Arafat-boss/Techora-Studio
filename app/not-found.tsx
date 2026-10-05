@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <div className="pt-36 sm:pt-48 pb-24 px-4 sm:px-6 md:px-10 max-w-2xl mx-auto text-center">
       <div className="space-y-6">
-        <span className="text-xs font-mono uppercase tracking-widest text-[#5e9c04] block font-semibold">
+        <span className="text-xs font-mono uppercase tracking-widest text-zinc-900 block font-semibold">
           Error 404
         </span>
 

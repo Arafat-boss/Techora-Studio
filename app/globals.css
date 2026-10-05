@@ -8,10 +8,10 @@
     --bg-card: #ffffff;
     --bg-card-hover: #fcfcfd;
     
-    --accent-lime: #73ba08;
-    --accent-lime-muted: #5e9c04;
-    --accent-lime-subtle: rgba(115, 186, 8, 0.1);
-    --accent-lime-glow: rgba(115, 186, 8, 0.25);
+    --accent-lime: #B8FF4B;
+    --accent-lime-muted: #B8FF4B;
+    --accent-lime-subtle: rgba(184, 255, 75, 0.15);
+    --accent-lime-glow: rgba(184, 255, 75, 0.35);
     
     --text-primary: #09090b;
     --text-secondary: #52525b;
@@ -21,7 +21,7 @@
     --border-subtle: rgba(0, 0, 0, 0.08);
     --border-medium: rgba(0, 0, 0, 0.14);
     --border-bright: rgba(0, 0, 0, 0.22);
-    --border-lime: rgba(115, 186, 8, 0.4);
+    --border-lime: rgba(184, 255, 75, 0.4);
   }
 }
 
@@ -45,7 +45,7 @@ body {
 }
 
 ::selection {
-  background-color: #84cc16;
+  background-color: #B8FF4B;
   color: #000000;
 }
 
@@ -75,9 +75,9 @@ body {
 }
 
 .glass-badge-lime {
-  background: rgba(115, 186, 8, 0.1);
-  border: 1px solid rgba(115, 186, 8, 0.3);
-  color: #5e9c04;
+  background: rgba(184, 255, 75, 0.15);
+  border: 1px solid rgba(184, 255, 75, 0.4);
+  color: #B8FF4B;
 }
 
 /* Corner Crosshairs */

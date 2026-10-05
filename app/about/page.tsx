@@ -54,8 +54,8 @@ export default function AboutPage() {
     <div className="pt-32 sm:pt-40 pb-20 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
       {/* Page Header */}
       <div className="max-w-4xl space-y-6 mb-20">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-[#5e9c04] font-semibold">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#84cc16]" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-zinc-900 font-semibold">
+          <span className="w-2 h-2 rounded-full bg-[#B8FF4B]" />
           <span>About Techora</span>
         </div>
 
@@ -98,7 +98,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80" />
         <div className="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#84cc16] animate-ping" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#B8FF4B] animate-ping" />
             <span className="text-xs font-mono text-white uppercase tracking-wider font-semibold">
               TECHORA LABS & INDUSTRIAL PROTOTYPING HQ
             </span>
@@ -124,7 +124,7 @@ export default function AboutPage() {
                 <span className="text-4xl sm:text-5xl font-extrabold text-zinc-900 tracking-tighter block mb-2 font-mono">
                   {stat.value}
                 </span>
-                <h3 className="text-base font-semibold text-[#5e9c04] tracking-tight mb-2 uppercase font-mono text-xs">
+                <h3 className="text-base font-semibold text-zinc-900 tracking-tight mb-2 uppercase font-mono text-xs">
                   {stat.label}
                 </h3>
               </div>
@@ -139,7 +139,7 @@ export default function AboutPage() {
       {/* Core Values */}
       <div className="mb-24">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-          <span className="text-xs font-mono uppercase text-[#5e9c04] tracking-widest block font-semibold">
+          <span className="text-xs font-mono uppercase text-zinc-900 tracking-widest block font-semibold">
             Principles
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 tracking-tight">
@@ -155,7 +155,7 @@ export default function AboutPage() {
                 key={idx}
                 className="bg-[#f9f9fb] border border-black/10 rounded-3xl p-8 hover:border-black/30 hover:bg-white transition-all space-y-4 shadow-xs"
               >
-                <div className="w-12 h-12 rounded-2xl bg-black/[0.04] border border-black/10 flex items-center justify-center text-[#5e9c04]">
+                <div className="w-12 h-12 rounded-2xl bg-black/[0.04] border border-black/10 flex items-center justify-center text-zinc-900">
                   <Icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold text-zinc-900 tracking-tight">

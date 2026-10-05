@@ -52,7 +52,7 @@ export default function PrivacyPolicyPage() {
       </Link>
 
       <div className="space-y-4 mb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-[#5e9c04] font-semibold">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-zinc-900 font-semibold">
           <Shield className="w-3.5 h-3.5" />
           <span>Legal Documentation</span>
         </div>

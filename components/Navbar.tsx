@@ -55,7 +55,7 @@ export default function Navbar() {
             <span className="text-base tracking-wider uppercase font-semibold text-zinc-900">
               TECHORA
             </span>
-            <span className="w-1.5 h-1.5 rounded-full bg-[#84cc16]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#B8FF4B]" />
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -134,8 +134,8 @@ export default function Navbar() {
             {/* Top / Main Navigation Links */}
             <div className="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-10 mt-4">
               <div className="md:col-span-7 flex flex-col gap-2">
-                <span className="text-xs uppercase font-mono text-[#5e9c04] tracking-widest mb-2 flex items-center gap-2 font-semibold">
-                  <span className="w-2 h-2 rounded-full bg-[#84cc16]" />
+                <span className="text-xs uppercase font-mono text-zinc-900 tracking-widest mb-2 flex items-center gap-2 font-semibold">
+                  <span className="w-2 h-2 rounded-full bg-[#B8FF4B]" />
                   Navigation
                 </span>
                 {navLinks.map((link, idx) => (
@@ -184,14 +184,14 @@ export default function Navbar() {
                       href="mailto:info@techora.design"
                       className="hover:text-black transition-colors flex items-center gap-2"
                     >
-                      <Mail className="w-3.5 h-3.5 text-[#5e9c04]" />
+                      <Mail className="w-3.5 h-3.5 text-zinc-900" />
                       info@techora.design
                     </a>
                     <a
                       href="tel:+14155550198"
                       className="hover:text-black transition-colors flex items-center gap-2"
                     >
-                      <Phone className="w-3.5 h-3.5 text-[#5e9c04]" />
+                      <Phone className="w-3.5 h-3.5 text-zinc-900" />
                       +1 (415) 555-0198
                     </a>
                   </p>
@@ -218,7 +218,7 @@ export default function Navbar() {
                     <div className="text-xs font-semibold text-zinc-900">Status</div>
                     <div className="text-xs text-zinc-500">Taking on Q1/Q2 Projects</div>
                   </div>
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#84cc16] shadow-[0_0_8px_#84cc16] animate-ping" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#B8FF4B] shadow-[0_0_8px_#B8FF4B] animate-ping" />
                 </div>
               </div>
             </div>

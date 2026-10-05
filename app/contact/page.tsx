@@ -35,8 +35,8 @@ export default function ContactPage() {
     <div className="pt-32 sm:pt-40 pb-20 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
       {/* Page Header */}
       <div className="max-w-3xl mb-16 space-y-4">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-[#5e9c04] font-semibold">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#84cc16]" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-zinc-900 font-semibold">
+          <span className="w-2 h-2 rounded-full bg-[#B8FF4B]" />
           <span>Start a Project</span>
         </div>
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-zinc-900">
@@ -53,7 +53,7 @@ export default function ContactPage() {
         {/* Left: Contact Info Card (Cols 1-5) */}
         <div className="lg:col-span-5 space-y-8 bg-[#f9f9fb] border border-black/10 p-8 sm:p-10 rounded-3xl shadow-sm relative overflow-hidden">
           <div>
-            <span className="text-xs font-mono uppercase tracking-widest text-[#5e9c04] block mb-2 font-semibold">
+            <span className="text-xs font-mono uppercase tracking-widest text-zinc-900 block mb-2 font-semibold">
               Headquarters
             </span>
             <h2 className="text-2xl font-bold text-zinc-900 tracking-tight">
@@ -63,7 +63,7 @@ export default function ContactPage() {
 
           <div className="space-y-6 text-sm text-zinc-700">
             <div className="flex items-start gap-3.5">
-              <div className="w-9 h-9 rounded-xl bg-white border border-black/10 flex items-center justify-center text-[#5e9c04] flex-shrink-0 shadow-xs">
+              <div className="w-9 h-9 rounded-xl bg-white border border-black/10 flex items-center justify-center text-zinc-900 flex-shrink-0 shadow-xs">
                 <Mail className="w-4 h-4" />
               </div>
               <div>
@@ -75,7 +75,7 @@ export default function ContactPage() {
             </div>
 
             <div className="flex items-start gap-3.5">
-              <div className="w-9 h-9 rounded-xl bg-white border border-black/10 flex items-center justify-center text-[#5e9c04] flex-shrink-0 shadow-xs">
+              <div className="w-9 h-9 rounded-xl bg-white border border-black/10 flex items-center justify-center text-zinc-900 flex-shrink-0 shadow-xs">
                 <Phone className="w-4 h-4" />
               </div>
               <div>
@@ -87,7 +87,7 @@ export default function ContactPage() {
             </div>
 
             <div className="flex items-start gap-3.5">
-              <div className="w-9 h-9 rounded-xl bg-white border border-black/10 flex items-center justify-center text-[#5e9c04] flex-shrink-0 shadow-xs">
+              <div className="w-9 h-9 rounded-xl bg-white border border-black/10 flex items-center justify-center text-zinc-900 flex-shrink-0 shadow-xs">
                 <MapPin className="w-4 h-4" />
               </div>
               <div>
@@ -106,7 +106,7 @@ export default function ContactPage() {
               <div className="text-xs font-semibold text-zinc-900">Availability</div>
               <div className="text-xs text-zinc-500 font-mono">Q1 / Q2 Active Sprints</div>
             </div>
-            <span className="w-2.5 h-2.5 rounded-full bg-[#84cc16] animate-ping" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#B8FF4B] animate-ping" />
           </div>
         </div>
 
@@ -118,7 +118,7 @@ export default function ContactPage() {
               animate={{ opacity: 1, scale: 1 }}
               className="py-16 text-center space-y-4"
             >
-              <div className="w-16 h-16 rounded-full bg-black/[0.04] border border-black/10 text-[#5e9c04] flex items-center justify-center mx-auto shadow-sm">
+              <div className="w-16 h-16 rounded-full bg-black/[0.04] border border-black/10 text-zinc-900 flex items-center justify-center mx-auto shadow-sm">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold text-zinc-900 tracking-tight">

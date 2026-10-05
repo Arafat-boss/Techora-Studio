@@ -59,8 +59,8 @@ export default function ProcessTimeline() {
     <section className="py-24 sm:py-32 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto border-t border-black/10">
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-[#5e9c04] font-semibold">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#84cc16]" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] border border-black/10 text-xs font-mono text-zinc-900 font-semibold">
+          <span className="w-2 h-2 rounded-full bg-[#B8FF4B]" />
           <span>How It Works</span>
         </div>
         <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-900">
@@ -147,7 +147,7 @@ export default function ProcessTimeline() {
                       key={i}
                       className="flex items-center gap-2 bg-white border border-black/10 px-3 py-2 rounded-xl text-xs text-zinc-800 font-mono shadow-xs"
                     >
-                      <CheckCircle className="w-3.5 h-3.5 text-[#5e9c04] flex-shrink-0" />
+                      <CheckCircle className="w-3.5 h-3.5 text-zinc-900 flex-shrink-0" />
                       <span>{item}</span>
                     </div>
                   ))}
@@ -190,7 +190,7 @@ export default function ProcessTimeline() {
                 
                 {/* Floating badge inside visual */}
                 <div className="absolute bottom-4 left-4 px-3 py-1.5 rounded-full bg-black/80 backdrop-blur-md text-xs font-mono text-white flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#84cc16] animate-ping" />
+                  <span className="w-2 h-2 rounded-full bg-[#B8FF4B] animate-ping" />
                   <span>Phase: {steps[activeStep].subtitle}</span>
                 </div>
               </div>

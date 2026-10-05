@@ -14,7 +14,7 @@ export default function ThankYouPage() {
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         className="space-y-6"
       >
-        <div className="w-20 h-20 rounded-full bg-black/[0.04] border border-black/10 text-[#5e9c04] flex items-center justify-center mx-auto shadow-sm">
+        <div className="w-20 h-20 rounded-full bg-black/[0.04] border border-black/10 text-zinc-900 flex items-center justify-center mx-auto shadow-sm">
           <CheckCircle2 className="w-10 h-10" />
         </div>
 
