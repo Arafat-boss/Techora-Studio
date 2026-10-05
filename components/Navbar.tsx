@@ -38,10 +38,10 @@ export default function Navbar() {
         }`}
       >
         <div
-          className={`w-full max-w-6xl mx-auto flex items-center justify-between transition-all duration-300 ${
+          className={`w-full max-w-6xl mx-auto flex items-center justify-between transition-all duration-300 bg-white/90 backdrop-blur-xl border border-black/10 rounded-full px-4 sm:px-6 ${
             isScrolled
-              ? "bg-white/90 backdrop-blur-xl border border-black/10 shadow-[0_8px_30px_rgba(0,0,0,0.06)] py-2.5 px-4 sm:px-6 rounded-full"
-              : "bg-transparent py-2 px-2"
+              ? "shadow-[0_8px_30px_rgba(0,0,0,0.08)] py-2"
+              : "shadow-[0_4px_20px_rgba(0,0,0,0.04)] py-2.5"
           }`}
         >
           {/* Logo */}

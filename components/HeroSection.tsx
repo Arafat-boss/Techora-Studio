@@ -41,20 +41,20 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full pt-36 sm:pt-44 pb-20 px-4 sm:px-6 md:px-10 overflow-hidden min-h-[90vh] flex flex-col justify-between">
-      {/* Full Hero Section Background Image */}
+      {/* Full Hero Section Background Image with Cinematic Dark Ambient Overlay */}
       <div className="absolute inset-0 w-full h-full pointer-events-none -z-10 select-none overflow-hidden">
         <Image
           src="/images/CKjpQCXbgdY4rJr7UEGzaixoAe8.webp"
           alt="Techora Studio Hero Background"
           fill
-          className="object-cover object-center scale-105 opacity-85"
+          className="object-cover object-center scale-105 opacity-90"
           priority
           quality={100}
         />
-        {/* Soft Vignette blending cleanly into White */}
-        <div className="absolute inset-0 bg-white/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-white/70" />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-transparent to-white/60" />
+        {/* Cinematic dark ambient overlay */}
+        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50" />
       </div>
 
       {/* Main Hero Header Content */}
@@ -64,12 +64,12 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-base sm:text-xl text-zinc-700 font-serif-italic max-w-xl"
+          className="text-base sm:text-xl text-zinc-300 font-serif-italic max-w-xl"
         >
           Thoughtful design across{" "}
-          <span className="text-zinc-900 not-italic font-semibold">brands</span>,{" "}
-          <span className="text-zinc-900 not-italic font-semibold">physical products</span>, and{" "}
-          <span className="text-zinc-900 font-serif-italic font-medium">digital experiences</span>
+          <span className="text-white not-italic font-semibold">brands</span>,{" "}
+          <span className="text-white not-italic font-semibold">physical products</span>, and{" "}
+          <span className="text-white font-serif-italic font-medium">digital experiences</span>
         </motion.p>
 
         {/* Main H1 Title */}
@@ -77,9 +77,9 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-zinc-900 leading-[1.02]"
+          className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white leading-[1.02]"
         >
-          Design for <span className="font-serif-italic font-normal text-zinc-800">Everyone</span>
+          Design for <span className="font-serif-italic font-normal text-zinc-300">Everyone</span>
         </motion.h1>
 
         {/* Studio Subtitle */}
@@ -87,7 +87,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl font-normal leading-relaxed"
+          className="text-sm sm:text-base md:text-lg text-zinc-300 max-w-2xl font-normal leading-relaxed"
         >
           We help ideas become clear, usable, and beautifully crafted. A multidisciplinary design and engineering studio translating visionary concepts into iconic physical and digital realities.
         </motion.p>
@@ -101,7 +101,7 @@ export default function HeroSection() {
         >
           <Link
             href="/contact"
-            className="group relative inline-flex items-center gap-2 bg-black text-white hover:bg-zinc-800 font-bold text-sm px-8 py-4 rounded-full transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:scale-105 active:scale-95 cursor-pointer"
+            className="group relative inline-flex items-center gap-2 bg-white text-black hover:bg-zinc-200 font-bold text-sm px-8 py-4 rounded-full transition-all duration-300 shadow-[0_4px_25px_rgba(255,255,255,0.2)] hover:scale-105 active:scale-95 cursor-pointer"
           >
             <span>Schedule a call</span>
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -109,10 +109,10 @@ export default function HeroSection() {
 
           <Link
             href="/gallery"
-            className="inline-flex items-center gap-2 bg-white/90 hover:bg-white border border-black/10 hover:border-black/25 text-zinc-900 font-medium text-sm px-7 py-4 rounded-full transition-all duration-200 backdrop-blur-xl shadow-sm"
+            className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium text-sm px-7 py-4 rounded-full transition-all duration-200 backdrop-blur-xl shadow-sm"
             data-cursor-text="Explore Gallery"
           >
-            <Compass className="w-4 h-4 text-zinc-700" />
+            <Compass className="w-4 h-4 text-zinc-300" />
             <span>Explore Showcase</span>
           </Link>
         </motion.div>
@@ -130,7 +130,7 @@ export default function HeroSection() {
             <Link href={`/gallery`} className="block group">
               <Card3DTilt
                 cursorText="Preview gallery"
-                className="bg-white/90 backdrop-blur-xl border border-black/10 group-hover:border-black/30 rounded-2xl p-3.5 flex flex-col justify-between transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.06)] relative overflow-hidden"
+                className="bg-white/95 backdrop-blur-xl border border-white/20 group-hover:border-white/50 rounded-2xl p-3.5 flex flex-col justify-between transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.25)] relative overflow-hidden"
               >
                 {/* Corner Crosshair Decoration */}
                 <div className="absolute top-2 left-2 text-zinc-300 group-hover:text-zinc-700 transition-colors font-mono text-[10px]">
