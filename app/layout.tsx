@@ -28,6 +28,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://techorastudio.vercel.app"),
   title: "Techora — Next-Gen Hardware, Digital Products & Brand Systems",
   description: "A precision design studio crafted for breakthrough physical hardware, tactile computing, next-gen digital experiences, and visionary brand systems.",
   keywords: ["design studio", "hardware design", "digital products", "brand systems", "nextjs", "techora"],
@@ -42,6 +43,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Techora — Design for Everyone",
     description: "Thoughtful design across brands, products, and digital experiences.",
+    url: "https://techorastudio.vercel.app",
+    siteName: "Techora Studio",
     type: "website",
   },
 };
