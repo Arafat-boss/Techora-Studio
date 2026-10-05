@@ -70,7 +70,7 @@ export default function Card3DTilt({
       onPointerMove={handlePointerMove}
       onPointerLeave={handlePointerLeave}
       onClick={onClick}
-      data-cursor-text={cursorText}
+      data-cursor-text={cursorText || undefined}
       className={`relative transform-gpu ${className}`}
     >
       {children}

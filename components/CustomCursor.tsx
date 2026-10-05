@@ -69,20 +69,37 @@ export default function CustomCursor() {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
-            className="px-3.5 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-white text-[12px] font-mono whitespace-nowrap shadow-2xl flex items-center gap-2 -translate-x-1/2 -translate-y-1/2 text-white/90"
+            style={{
+              backgroundColor: "#09090b",
+              color: "#ffffff",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
+              boxShadow: "0 10px 30px -5px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2)",
+            }}
+            className="px-4 py-2 rounded-full flex items-center gap-2.5 -translate-x-1/2 -translate-y-1/2 select-none pointer-events-none z-50"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#B8FF4B] animate-pulse" />
-            <span>{cursorText}</span>
+            <span
+              className="w-2 h-2 rounded-full shrink-0 animate-pulse"
+              style={{
+                backgroundColor: "#B8FF4B",
+                boxShadow: "0 0 8px #B8FF4B",
+              }}
+            />
+            <span
+              style={{ color: "#ffffff" }}
+              className="text-xs font-mono font-medium tracking-wide whitespace-nowrap leading-none"
+            >
+              {cursorText}
+            </span>
           </motion.div>
         ) : (
           <motion.div
             animate={{
               scale: isPointer ? 1.6 : 1,
-              backgroundColor: isPointer ? "rgba(184, 255, 75, 0.4)" : "rgba(0, 0, 0, 0.15)",
+              backgroundColor: isPointer ? "rgba(184, 255, 75, 0.45)" : "rgba(0, 0, 0, 0.15)",
               borderColor: isPointer ? "#B8FF4B" : "rgba(0, 0, 0, 0.4)",
             }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="w-3.5 h-3.5 rounded-full border -translate-x-1/2 -translate-y-1/2 backdrop-blur-xs"
+            className="w-3.5 h-3.5 rounded-full border -translate-x-1/2 -translate-y-1/2 pointer-events-none"
           />
         )}
       </motion.div>
